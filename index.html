@@ -16,12 +16,107 @@
           </p>
         </header>
 
-        <div class="stripe-pricing" aria-label="Tabla de precios de Stripe">
-          <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-          <stripe-pricing-table
-            pricing-table-id="prctbl_1SxaKmE1OJtIlVcOZiHsj1GV"
-            publishable-key="pk_test_51RjiJ9E1OJtIlVcOBHDtbe93llhEQKwyyOSf8xzuZ5V4Ghj6tBJ4RRy2TFYMN5K4leU1MRnWx3JBdh6h7bagnrzL000uECbxpa"
-          ></stripe-pricing-table>
+        <div class="plans-grid">
+          <article class="plan-card plan-card--pro" data-plan="gratis">
+            <div class="plan-card__header">
+              <h2 class="plan-card__title">Gratis</h2>
+              <p class="plan-card__desc">Empieza con lo esencial para tu equipo.</p>
+              <div class="plan-card__price-row">
+                <span class="plan-card__price">0 €</span>
+                <span class="plan-card__price-note">por mes</span>
+              </div>
+              <p class="plan-card__muted">1 mes gratis</p>
+            </div>
+
+            <div class="plan-card__divider"></div>
+
+            <button class="plan-card__cta plan-card__cta--ghost" type="button" aria-label="Empezar Gratis">
+              Empezar Gratis
+            </button>
+
+            <p class="plan-card__section-title">Este plan incluye:</p>
+            <ul class="plan-card__features">
+              <li>Sube 3 archivos al mes</li>
+              <li>1 deportista</li>
+              <li>3 informes automáticos</li>
+              <li>Análisis e interpretaciones</li>
+              <li>Importación automática</li>
+              <li>Informes automáticos</li>
+            </ul>
+          </article>
+
+          <article class="plan-card plan-card--pro" data-plan="pro">
+            <div class="plan-card__header">
+              <h2 class="plan-card__title">PRO</h2>
+              <p class="plan-card__desc">Diseñado para equipos con alto rendimiento.</p>
+              <div class="plan-card__price-row">
+                <span class="plan-card__price">Desde 39 €</span>
+                <span class="plan-card__price-note">por mes</span>
+              </div>
+              <p class="plan-card__muted">Precio por deportista</p>
+            </div>
+
+            <div class="plan-card__divider"></div>
+
+            <label class="plan-card__switch">
+              <input type="checkbox" class="plan-card__switch-input" aria-label="Cambiar a anual" />
+              <span class="plan-card__switch-slider" aria-hidden="true"></span>
+              <span class="plan-card__switch-label">Anual</span>
+            </label>
+
+            <button class="plan-card__cta plan-card__cta--primary" type="button" aria-label="Seleccionar Plan PRO">
+              Seleccionar Plan
+            </button>
+
+            <select class="plan-card__select" aria-label="Selecciona número de deportistas">
+              <option>15 deportistas</option>
+              <option>25 deportistas</option>
+              <option>50 deportistas</option>
+              <option>100 deportistas</option>
+              <option>150 deportistas</option>
+              <option>Unlimited</option>
+            </select>
+
+            <p class="plan-card__section-title">Todo lo del plan Gratis, más:</p>
+            <ul class="plan-card__features">
+              <li>15 deportistas</li>
+              <li>Valoraciones ilimitadas</li>
+              <li>Interpretaciones con IA</li>
+              <li>Múltiples deportistas</li>
+              <li>Multi-dispositivo</li>
+              <li>Progreso del deportista</li>
+            </ul>
+          </article>
+
+          <article class="plan-card plan-card--enterprise" data-plan="enterprise">
+            <div class="plan-card__header">
+              <h2 class="plan-card__title">Enterprise</h2>
+              <p class="plan-card__desc">
+                Para organizaciones que necesitan flexibilidad, escala y control total.
+              </p>
+              <div class="plan-card__price-row">
+                <span class="plan-card__price">Custom</span>
+              </div>
+            </div>
+
+            <div class="plan-card__divider"></div>
+
+            <p class="plan-card__muted">Planes flexibles</p>
+
+            <a class="plan-card__cta plan-card__cta--ghost" href="#" aria-label="Solicitar información">
+              Solicitar información
+            </a>
+
+            <p class="plan-card__section-title">Todo lo del plan PRO, más:</p>
+            <ul class="plan-card__features">
+              <li>Planes flexibles según necesidades</li>
+              <li>Personalización del sistema</li>
+              <li>Análisis adaptado</li>
+              <li>Informes customizados</li>
+              <li>Integración de dispositivos</li>
+              <li>Soporte y onboarding 24/7</li>
+            </ul>
+          </article>
         </div>
 
         <div class="legal-note">
