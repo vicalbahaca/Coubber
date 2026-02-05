@@ -24,6 +24,12 @@
               <p class="plan-card__price">GRATIS</p>
             </div>
 
+            <div class="plan-card__actions">
+              <button class="plan-card__cta plan-card__cta--ghost" type="button" aria-label="Empezar Gratis">
+                Empezar Gratis
+              </button>
+            </div>
+
             <ul class="plan-card__features">
               <li>Sube 3 archivos al mes</li>
               <li>1 deportista</li>
@@ -32,24 +38,17 @@
               <li>Importación automática</li>
               <li>Informes automáticos</li>
             </ul>
-
-            <button class="plan-card__cta plan-card__cta--ghost" type="button" aria-label="Empezar Gratis">
-              Empezar Gratis
-            </button>
           </article>
 
           <article class="plan-card plan-card--pro is-recommended" data-plan="standard">
             <div class="plan-card__badge" aria-label="Plan recomendado">Recomendado</div>
             <div class="plan-card__header">
               <div class="billing-tabs billing-tabs--inline" role="tablist" aria-label="Modalidad de pago">
-                <button class="billing-tabs__tab is-active" type="button" role="tab" aria-selected="true">
-                  20% Anual
-                </button>
-                <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
-                  15% Anual fraccionado
-                </button>
                 <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
                   Mensual
+                </button>
+                <button class="billing-tabs__tab is-active" type="button" role="tab" aria-selected="true">
+                  Anual · Ahorra 17%
                 </button>
               </div>
               <h2 class="plan-card__title">Standard</h2>
@@ -61,6 +60,21 @@
               <p class="plan-card__muted">Pago mensual (IVA no incluido)</p>
             </div>
 
+            <div class="plan-card__actions">
+              <select class="plan-card__select" aria-label="Selecciona paquete PRO">
+                <option>PRO 15</option>
+                <option>PRO 25</option>
+                <option>PRO 50</option>
+                <option>PRO 100</option>
+                <option>PRO 150</option>
+                <option>PRO Unlimited</option>
+              </select>
+
+              <button class="plan-card__cta plan-card__cta--primary" type="button" aria-label="Seleccionar Plan">
+                Seleccionar Plan
+              </button>
+            </div>
+
             <ul class="plan-card__features">
               <li>25 deportistas</li>
               <li>Todo lo del Plan Free</li>
@@ -70,19 +84,6 @@
               <li>Multi-dispositivo</li>
               <li>Progreso del deportista</li>
             </ul>
-
-            <select class="plan-card__select" aria-label="Selecciona paquete PRO">
-              <option>PRO 15</option>
-              <option>PRO 25</option>
-              <option>PRO 50</option>
-              <option>PRO 100</option>
-              <option>PRO 150</option>
-              <option>PRO Unlimited</option>
-            </select>
-
-            <button class="plan-card__cta plan-card__cta--primary" type="button" aria-label="Seleccionar Plan">
-              Seleccionar Plan
-            </button>
           </article>
 
           <article class="plan-card plan-card--enterprise" data-plan="enterprise">
@@ -98,6 +99,12 @@
               <a class="plan-card__link-inline" href="#" aria-label="Saber más">Saber más →</a>
             </div>
 
+            <div class="plan-card__actions">
+              <a class="plan-card__cta plan-card__cta--ghost" href="#" aria-label="Solicitar información">
+                Solicitar información
+              </a>
+            </div>
+
             <ul class="plan-card__features">
               <li>Personalización del sistema</li>
               <li>Análisis adaptado</li>
@@ -105,10 +112,6 @@
               <li>Integración de dispositivos</li>
               <li>Soporte y onboarding 24/7</li>
             </ul>
-
-            <a class="plan-card__cta plan-card__cta--ghost" href="#" aria-label="Solicitar información">
-              Solicitar información
-            </a>
           </article>
         </div>
 
