@@ -74,6 +74,18 @@ main {
   margin-top: 12px;
 }
 
+.stripe-pricing {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.stripe-pricing stripe-pricing-table {
+  width: 100%;
+  max-width: 980px;
+}
+
 .plan-card {
   position: relative;
   display: flex;
