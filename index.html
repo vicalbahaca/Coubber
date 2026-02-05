@@ -67,9 +67,73 @@
                 </button>
               </div>
               <h2 class="plan-card__title">PRO</h2>
-              <p class="plan-card__price">33,15 €/mes</p>
-              <p class="plan-card__subtext">2,21€/deportista/mes</p>
-              <p class="plan-card__note">Pago anual (IVA no incluido)</p>
+              <label class="sr-only" for="proSeats">Número de deportistas</label>
+              <select id="proSeats" class="plan-card__select" aria-label="Selecciona número de deportistas">
+                <option
+                  value="15"
+                  data-monthly="39,00"
+                  data-annual="32,37"
+                  data-subtext="2,60 €/deportista/mes"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                  selected
+                >
+                  15 deportistas
+                </option>
+                <option
+                  value="25"
+                  data-monthly="65,00"
+                  data-annual="53,95"
+                  data-subtext="2,60 €/deportista/mes"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                >
+                  25 deportistas
+                </option>
+                <option
+                  value="50"
+                  data-monthly="130,00"
+                  data-annual="107,90"
+                  data-subtext="2,60 €/deportista/mes"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                >
+                  50 deportistas
+                </option>
+                <option
+                  value="100"
+                  data-monthly="260,00"
+                  data-annual="215,80"
+                  data-subtext="2,60 €/deportista/mes"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                >
+                  100 deportistas
+                </option>
+                <option
+                  value="150"
+                  data-monthly="249,00"
+                  data-annual="206,67"
+                  data-subtext="1,66 €/deportista/mes"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                >
+                  150 deportistas
+                </option>
+                <option
+                  value="unlimited"
+                  data-monthly="299,00"
+                  data-annual="248,17"
+                  data-subtext="Ilimitado"
+                  data-stripe-monthly="REPLACE_ME"
+                  data-stripe-annual="REPLACE_ME"
+                >
+                  Unlimited
+                </option>
+              </select>
+              <p class="plan-card__price"><span data-pro-price>32,37</span> €/mes</p>
+              <p class="plan-card__subtext" data-pro-subtext>2,60 €/deportista/mes</p>
+              <p class="plan-card__note" data-pro-note>Pago anual (17% de ahorro, IVA no incluido)</p>
             </div>
 
             <ul class="plan-card__features">
@@ -82,13 +146,14 @@
               <li>Progreso del deportista</li>
             </ul>
 
-            <button
+            <a
               class="plan-card__cta plan-card__cta--primary"
-              type="button"
+              href="#"
               aria-label="Seleccionar Plan PRO"
+              data-stripe-link
             >
               Seleccionar Plan
-            </button>
+            </a>
           </article>
 
           <article class="plan-card plan-card--enterprise" data-plan="enterprise">
@@ -129,5 +194,63 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const proCard = document.querySelector('[data-plan="pro"]');
+        if (!proCard) return;
+
+        const select = proCard.querySelector('#proSeats');
+        const priceEl = proCard.querySelector('[data-pro-price]');
+        const subtextEl = proCard.querySelector('[data-pro-subtext]');
+        const noteEl = proCard.querySelector('[data-pro-note]');
+        const cta = proCard.querySelector('[data-stripe-link]');
+        const toggleTabs = proCard.querySelectorAll('.plan-card__toggle-tab');
+
+        let billing = 'annual';
+
+        const updateCTA = (link) => {
+          if (!link || link === 'REPLACE_ME') {
+            cta.setAttribute('href', '#');
+            cta.setAttribute('aria-disabled', 'true');
+            cta.classList.add('is-disabled');
+            return;
+          }
+
+          cta.setAttribute('href', link);
+          cta.removeAttribute('aria-disabled');
+          cta.classList.remove('is-disabled');
+        };
+
+        const updatePricing = () => {
+          const option = select.options[select.selectedIndex];
+          const price = billing === 'annual' ? option.dataset.annual : option.dataset.monthly;
+          const subtext = option.dataset.subtext;
+          const link = billing === 'annual' ? option.dataset.stripeAnnual : option.dataset.stripeMonthly;
+
+          priceEl.textContent = price;
+          subtextEl.textContent = subtext;
+          noteEl.textContent =
+            billing === 'annual'
+              ? 'Pago anual (17% de ahorro, IVA no incluido)'
+              : 'Pago mensual (IVA no incluido)';
+          updateCTA(link);
+        };
+
+        toggleTabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            billing = tab.dataset.billing;
+            toggleTabs.forEach((btn) => {
+              const isActive = btn === tab;
+              btn.classList.toggle('is-active', isActive);
+              btn.setAttribute('aria-selected', String(isActive));
+            });
+            updatePricing();
+          });
+        });
+
+        select.addEventListener('change', updatePricing);
+        updatePricing();
+      })();
+    </script>
   </body>
 </html>
