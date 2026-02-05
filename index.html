@@ -42,6 +42,32 @@
             <div class="plan-card__badge" aria-label="Plan recomendado">Recomendado</div>
 
             <div class="plan-card__header">
+              <div
+                class="plan-card__toggle"
+                role="tablist"
+                aria-label="Modalidad de pago del plan Individual"
+              >
+                <button
+                  class="plan-card__toggle-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-label="Mensual"
+                  data-billing="monthly"
+                >
+                  Mensual
+                </button>
+                <button
+                  class="plan-card__toggle-tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-label="Anual con ahorro"
+                  data-billing="annual"
+                >
+                  Anual <span class="plan-card__toggle-saving">· Ahorra 17%</span>
+                </button>
+              </div>
               <h2 class="plan-card__title">Individual</h2>
               <p class="plan-card__price">33,15 €/mes</p>
               <p class="plan-card__subtext">2,21€/deportista/mes</p>

@@ -7,6 +7,7 @@
   --color-muted: #5d6873;
   --color-accent: #0f9f5c;
   --color-accent-2: #ff8a00;
+  --color-info: #2f7ff2;
   --color-border: #e2e6ea;
   --radius-lg: 22px;
   --radius-md: 16px;
@@ -133,6 +134,44 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.plan-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: #edf0f3;
+  border: 1px solid rgba(27, 31, 36, 0.1);
+  align-self: flex-start;
+}
+
+.plan-card__toggle-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.plan-card__toggle-tab.is-active,
+.plan-card__toggle-tab[aria-selected="true"] {
+  background: #1b1f24;
+  color: #ffffff;
+}
+
+.plan-card__toggle-tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.plan-card__toggle-saving {
+  color: var(--color-info);
+  font-weight: 600;
 }
 
 .plan-card__eyebrow {
