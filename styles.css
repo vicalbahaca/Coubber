@@ -9,10 +9,10 @@
   --color-accent-2: #2f7ff2;
   --color-info: #2f7ff2;
   --color-border: #4a4a4a;
-  --radius-lg: 22px;
-  --radius-md: 16px;
-  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
-  --shadow-hover: 0 22px 50px rgba(0, 0, 0, 0.45);
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --shadow-soft: 0 16px 32px rgba(0, 0, 0, 0.28);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -37,6 +37,7 @@ body {
   background: var(--color-bg);
   min-height: 100vh;
   font-size: 14px;
+  line-height: 1.4;
 }
 
 main {
@@ -54,7 +55,7 @@ main {
 }
 
 .pricing-header h1 {
-  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  font-size: clamp(1.7rem, 2.2vw, 2.5rem);
   margin: 0 0 12px;
   letter-spacing: -0.02em;
 }
@@ -72,7 +73,7 @@ main {
   gap: 4px;
   padding: 3px;
   border-radius: 999px;
-  background: #171717;
+  background: #1c1c1c;
   margin: 0 0 10px;
   border: 1px solid #2a2a2a;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
@@ -81,9 +82,9 @@ main {
 .billing-tabs__tab {
   border: none;
   background: transparent;
-  padding: 4px 10px;
+  padding: 4px 9px;
   border-radius: 999px;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #bcbcbc;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
@@ -111,7 +112,7 @@ main {
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
   align-items: stretch;
   margin-top: 12px;
 }
@@ -120,8 +121,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 22px;
+  gap: 14px;
+  padding: 24px;
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
@@ -151,14 +152,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-height: 150px;
+  min-height: 154px;
 }
 
 .plan-card__actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 92px;
+  min-height: 96px;
   padding-top: 4px;
   padding-bottom: 6px;
   border-top: 1px solid #454545;
@@ -167,8 +168,8 @@ main {
 
 .plan-card__desc {
   margin: 0;
-  color: #d7d7d7;
-  font-size: 0.9rem;
+  color: #d0d0d0;
+  font-size: 0.88rem;
 }
 
 .plan-card__price-row {
@@ -179,13 +180,13 @@ main {
 
 .plan-card__price-note {
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .plan-card__muted {
   margin: 0;
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .plan-card__link-inline {
@@ -208,7 +209,7 @@ main {
 .plan-card__section-title {
   margin: 4px 0 0;
   color: #f0f0f0;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 600;
 }
 
@@ -264,12 +265,12 @@ main {
 
 .plan-card__select {
   width: 100%;
-  padding: 8px 12px;
-  border-radius: 10px;
+  padding: 7px 12px;
+  border-radius: 8px;
   border: 1px solid #4a4a4a;
   background: #2a2a2a;
   color: #f1f1f1;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   appearance: none;
   background-image:
     linear-gradient(45deg, transparent 50%, #9f9f9f 50%),
@@ -298,7 +299,7 @@ main {
 }
 
 .plan-card__price {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 600;
   margin: 0;
 }
@@ -323,10 +324,10 @@ main {
 
 .plan-card__features {
   margin: 0;
-  padding: 14px 0 0;
+  padding: 12px 0 0;
   list-style: none;
   display: grid;
-  gap: 8px;
+  gap: 7px;
   color: #c4c4c4;
   border-top: 0;
 }
@@ -335,7 +336,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.86rem;
+  font-size: 0.83rem;
 }
 
 .plan-card__features li::before {
@@ -351,11 +352,12 @@ main {
   margin-top: 0;
   border: 1px solid #f1f1f1;
   border-radius: 999px;
-  padding: 10px 14px;
+  padding: 9px 14px;
   background: #f1f1f1;
   font-weight: 600;
   color: #1c1c1c;
   width: 100%;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
