@@ -25,14 +25,15 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   min-height: 100vh;
+  font-size: 14px;
 }
 
 main {
-  padding: 64px 20px 80px;
+  padding: 48px 16px 64px;
 }
 
 .pricing-section {
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -42,26 +43,26 @@ main {
 }
 
 .pricing-header h1 {
-  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
   margin: 0 0 12px;
   letter-spacing: -0.02em;
 }
 
 .pricing-subtitle {
   margin: 0 auto;
-  max-width: 640px;
+  max-width: 560px;
   color: var(--color-muted);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .plan-tabs {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px;
+  padding: 4px;
   border-radius: 999px;
   background: #1f1f1f;
-  margin: 28px auto 40px;
+  margin: 22px auto 32px;
   width: fit-content;
   border: 1px solid #3a3a3a;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -70,9 +71,9 @@ main {
 .plan-tabs__tab {
   border: none;
   background: transparent;
-  padding: 10px 18px;
+  padding: 8px 14px;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #c2c2c2;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
@@ -94,7 +95,7 @@ main {
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 18px;
   align-items: stretch;
 }
 
@@ -102,8 +103,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 28px;
+  gap: 16px;
+  padding: 22px;
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
@@ -139,7 +140,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 4px;
+  padding: 3px;
   border-radius: 999px;
   background: #1f1f1f;
   border: 1px solid #3a3a3a;
@@ -149,9 +150,9 @@ main {
 .plan-card__toggle-tab {
   border: none;
   background: transparent;
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   color: #bdbdbd;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
@@ -181,12 +182,12 @@ main {
 }
 
 .plan-card__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0;
 }
 
 .plan-card__price {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin: 0;
 }
@@ -200,7 +201,7 @@ main {
 .plan-card__note {
   margin: 0;
   color: var(--color-muted);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
 }
 
 .plan-card__price-group {
@@ -211,10 +212,10 @@ main {
 
 .plan-card__features {
   margin: 0;
-  padding: 18px 0 0;
+  padding: 14px 0 0;
   list-style: none;
   display: grid;
-  gap: 10px;
+  gap: 8px;
   color: #c4c4c4;
   border-top: 1px solid #454545;
 }
@@ -223,7 +224,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.95rem;
+  font-size: 0.86rem;
 }
 
 .plan-card__features li::before {
@@ -239,7 +240,7 @@ main {
   margin-top: auto;
   border: 1px solid #f1f1f1;
   border-radius: 999px;
-  padding: 12px 18px;
+  padding: 10px 14px;
   background: #f1f1f1;
   font-weight: 600;
   color: #1c1c1c;
@@ -276,7 +277,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px 18px;
+  padding: 10px 14px;
   border-radius: 999px;
   background: #f1f1f1;
   color: #1c1c1c;
@@ -299,13 +300,13 @@ main {
 
 .plan-card__badge {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  padding: 6px 12px;
+  top: 14px;
+  right: 14px;
+  padding: 5px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: #d2d2d2;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 600;
 }
 
@@ -329,10 +330,10 @@ main {
 }
 
 .legal-note {
-  margin-top: 28px;
+  margin-top: 22px;
   text-align: center;
   color: #a9a9a9;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .legal-note__line {
