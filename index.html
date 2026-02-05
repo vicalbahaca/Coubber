@@ -16,18 +16,6 @@
           </p>
         </header>
 
-        <div class="billing-tabs" role="tablist" aria-label="Modalidad de pago">
-          <button class="billing-tabs__tab is-active" type="button" role="tab" aria-selected="true">
-            20% Anual
-          </button>
-          <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
-            15% Anual fraccionado
-          </button>
-          <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
-            Mensual
-          </button>
-        </div>
-
         <div class="plans-grid">
           <article class="plan-card plan-card--free" data-plan="free">
             <div class="plan-card__header">
@@ -53,6 +41,17 @@
           <article class="plan-card plan-card--pro is-recommended" data-plan="standard">
             <div class="plan-card__badge" aria-label="Plan recomendado">Recomendado</div>
             <div class="plan-card__header">
+              <div class="billing-tabs billing-tabs--inline" role="tablist" aria-label="Modalidad de pago">
+                <button class="billing-tabs__tab is-active" type="button" role="tab" aria-selected="true">
+                  20% Anual
+                </button>
+                <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
+                  15% Anual fraccionado
+                </button>
+                <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
+                  Mensual
+                </button>
+              </div>
               <h2 class="plan-card__title">Standard</h2>
               <div class="plan-card__price-row">
                 <span class="plan-card__price">59.00€</span>

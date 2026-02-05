@@ -106,6 +106,12 @@ main {
   justify-content: center;
 }
 
+.billing-tabs--inline {
+  margin: 0 0 8px;
+  justify-content: flex-end;
+  width: fit-content;
+}
+
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
