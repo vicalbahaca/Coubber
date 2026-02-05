@@ -294,6 +294,11 @@ main {
   margin: 0;
 }
 
+.plan-card__eyebrow-spacer {
+  display: block;
+  height: 18px;
+}
+
 .plan-card__title {
   font-size: 1.3rem;
   margin: 0;
