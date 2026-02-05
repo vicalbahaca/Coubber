@@ -361,6 +361,11 @@ main {
   font-size: 0.85rem;
   cursor: pointer;
   transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .plan-card__cta:hover {
