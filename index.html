@@ -50,31 +50,48 @@
               <h2 class="plan-card__title">PRO</h2>
               <p class="plan-card__desc">Diseñado para equipos con alto rendimiento.</p>
               <div class="plan-card__price-row">
-                <span class="plan-card__price">Desde 39 €</span>
+                <span class="plan-card__price"><span data-pro-price>39,00</span> €</span>
                 <span class="plan-card__price-note">por mes</span>
               </div>
-              <p class="plan-card__muted">Precio por deportista</p>
+              <p class="plan-card__muted" data-pro-subtext>2,60 €/deportista/mes</p>
             </div>
 
             <div class="plan-card__divider"></div>
 
             <label class="plan-card__switch">
-              <input type="checkbox" class="plan-card__switch-input" aria-label="Cambiar a anual" />
+              <input
+                type="checkbox"
+                class="plan-card__switch-input"
+                aria-label="Cambiar a anual"
+                data-billing-toggle
+              />
               <span class="plan-card__switch-slider" aria-hidden="true"></span>
-              <span class="plan-card__switch-label">Anual</span>
+              <span class="plan-card__switch-label">Anual · Ahorra 17%</span>
             </label>
 
             <button class="plan-card__cta plan-card__cta--primary" type="button" aria-label="Seleccionar Plan PRO">
               Seleccionar Plan
             </button>
 
-            <select class="plan-card__select" aria-label="Selecciona número de deportistas">
-              <option>15 deportistas</option>
-              <option>25 deportistas</option>
-              <option>50 deportistas</option>
-              <option>100 deportistas</option>
-              <option>150 deportistas</option>
-              <option>Unlimited</option>
+            <select class="plan-card__select" aria-label="Selecciona número de deportistas" data-pro-seats>
+              <option value="15" data-monthly="39,00" data-annual="32,37" data-subtext="2,60 €/deportista/mes">
+                15 deportistas
+              </option>
+              <option value="25" data-monthly="65,00" data-annual="53,95" data-subtext="2,60 €/deportista/mes">
+                25 deportistas
+              </option>
+              <option value="50" data-monthly="130,00" data-annual="107,90" data-subtext="2,60 €/deportista/mes">
+                50 deportistas
+              </option>
+              <option value="100" data-monthly="260,00" data-annual="215,80" data-subtext="2,60 €/deportista/mes">
+                100 deportistas
+              </option>
+              <option value="150" data-monthly="249,00" data-annual="206,67" data-subtext="1,66 €/deportista/mes">
+                150 deportistas
+              </option>
+              <option value="unlimited" data-monthly="299,00" data-annual="248,17" data-subtext="Ilimitado">
+                Unlimited
+              </option>
             </select>
 
             <p class="plan-card__section-title">Todo lo del plan Gratis, más:</p>
@@ -129,5 +146,29 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const proCard = document.querySelector('[data-plan="pro"]');
+        if (!proCard) return;
+
+        const priceEl = proCard.querySelector('[data-pro-price]');
+        const subtextEl = proCard.querySelector('[data-pro-subtext]');
+        const select = proCard.querySelector('[data-pro-seats]');
+        const toggle = proCard.querySelector('[data-billing-toggle]');
+
+        const updatePricing = () => {
+          const option = select.options[select.selectedIndex];
+          const isAnnual = toggle.checked;
+          const price = isAnnual ? option.dataset.annual : option.dataset.monthly;
+          const subtext = option.dataset.subtext;
+          priceEl.textContent = price;
+          subtextEl.textContent = subtext;
+        };
+
+        toggle.addEventListener('change', updatePricing);
+        select.addEventListener('change', updatePricing);
+        updatePricing();
+      })();
+    </script>
   </body>
 </html>
