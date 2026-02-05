@@ -367,10 +367,17 @@ main {
   cursor: pointer;
   transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.plan-card__cta:visited,
+.plan-card__cta:hover,
+.plan-card__cta:focus,
+.plan-card__cta:active {
+  text-decoration: none !important;
 }
 
 .plan-card__cta:hover {
