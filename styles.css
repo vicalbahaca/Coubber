@@ -150,13 +150,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-height: 150px;
 }
 
 .plan-card__actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 78px;
+  min-height: 92px;
   padding-top: 4px;
   padding-bottom: 6px;
   border-top: 1px solid #454545;
