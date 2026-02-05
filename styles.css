@@ -305,6 +305,21 @@ main {
   background: linear-gradient(160deg, #ffffff 0%, #eef3f6 100%);
 }
 
+.legal-note {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.legal-note__line {
+  margin: 8px 0 0;
+}
+
+.legal-note__line:first-child {
+  font-style: italic;
+}
+
 @keyframes cardIn {
   from {
     opacity: 0;
