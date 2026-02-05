@@ -105,6 +105,7 @@ main {
   margin: 0 0 12px;
   justify-content: flex-end;
   width: fit-content;
+  align-self: flex-end;
 }
 
 .plans-grid {
