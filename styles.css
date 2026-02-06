@@ -151,7 +151,7 @@ main {
 .plan-card__header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
   min-height: 0;
 }
 
