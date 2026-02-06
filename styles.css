@@ -155,6 +155,10 @@ main {
   min-height: 0;
 }
 
+.plan-card__header > * {
+  margin: 0;
+}
+
 
 .plan-card__actions {
   display: flex;
@@ -333,7 +337,7 @@ main {
 
 .plan-card__features {
   margin: 0;
-  padding: 12px 0 0;
+  padding: 0;
   list-style: none;
   display: grid;
   gap: 7px;
@@ -346,6 +350,7 @@ main {
   align-items: flex-start;
   gap: 10px;
   font-size: 0.83rem;
+  margin: 0;
 }
 
 .plan-card__features li::before {
