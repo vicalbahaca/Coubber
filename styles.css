@@ -120,7 +120,7 @@ main {
 .plan-card {
   position: relative;
   display: grid;
-  grid-template-rows: 160px 110px 1fr;
+  grid-template-rows: auto 150px 1fr;
   gap: 14px;
   padding: 24px;
   background: var(--color-surface);
@@ -159,7 +159,7 @@ main {
 .plan-card__actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
   min-height: 150px;
   padding-top: 6px;
   padding-bottom: 6px;
