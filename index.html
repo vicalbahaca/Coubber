@@ -49,10 +49,22 @@
             <div class="plan-card__header">
               <span class="plan-card__eyebrow-spacer" aria-hidden="true"></span>
               <div class="billing-tabs billing-tabs--inline" role="tablist" aria-label="Modalidad de pago">
-                <button class="billing-tabs__tab" type="button" role="tab" aria-selected="false">
+                <button
+                  class="billing-tabs__tab is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-billing="monthly"
+                >
                   Mensual
                 </button>
-                <button class="billing-tabs__tab is-active" type="button" role="tab" aria-selected="true">
+                <button
+                  class="billing-tabs__tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-billing="annual"
+                >
                   Anual
                 </button>
               </div>
@@ -66,19 +78,63 @@
             </div>
 
             <div class="plan-card__actions">
-              <select class="plan-card__select" aria-label="Selecciona paquete PRO">
-                <option>15 deportistas</option>
-                <option>25 deportistas</option>
-                <option>50 deportistas</option>
-                <option>100 deportistas</option>
-                <option>150 deportistas</option>
-                <option>Ilimitado</option>
+              <select class="plan-card__select" aria-label="Selecciona paquete PRO" data-pro-seats>
+                <option
+                  value="7"
+                  data-monthly-url="https://buy.stripe.com/test_5kQcN5e1UaDz2nN8Dxc7u02"
+                  data-annual-url="https://buy.stripe.com/test_9B6eVd5vo12Z6E3dXRc7u09"
+                >
+                  7 deportistas
+                </option>
+                <option
+                  value="15"
+                  data-monthly-url="https://buy.stripe.com/test_14AfZh1f84fbfaz4nhc7u03"
+                  data-annual-url="https://buy.stripe.com/test_28E9AT9LE4fb5zZ1b5c7u0a"
+                >
+                  15 deportistas
+                </option>
+                <option
+                  value="25"
+                  data-monthly-url="https://buy.stripe.com/test_8x214nf5YfXTe6v3jdc7u04"
+                  data-annual-url=""
+                >
+                  25 deportistas
+                </option>
+                <option
+                  value="50"
+                  data-monthly-url="https://buy.stripe.com/test_cNi4gz8HA12Z7I71b5c7u05"
+                  data-annual-url=""
+                >
+                  50 deportistas
+                </option>
+                <option
+                  value="100"
+                  data-monthly-url="https://buy.stripe.com/test_00waEX0b43b75zZ6vpc7u06"
+                  data-annual-url=""
+                >
+                  100 deportistas
+                </option>
+                <option
+                  value="150"
+                  data-monthly-url="https://buy.stripe.com/test_3cIdR90b4bHD9Qf6vpc7u07"
+                  data-annual-url=""
+                >
+                  150 deportistas
+                </option>
+                <option
+                  value="unlimited"
+                  data-monthly-url="https://buy.stripe.com/test_eVq9ATf5Y4fb2nN071c7u08"
+                  data-annual-url=""
+                >
+                  Ilimitado
+                </option>
               </select>
 
               <a
                 class="plan-card__cta plan-card__cta--primary"
-                href="https://buy.stripe.com/test_8x28wP8HA9zv7I7f1Vc7u01"
+                href="#"
                 aria-label="Seleccionar Plan"
+                data-pro-cta
               >
                 Seleccionar Plan
               </a>
@@ -130,5 +186,49 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const proCard = document.querySelector('[data-plan="standard"]');
+        if (!proCard) return;
+
+        const tabs = Array.from(proCard.querySelectorAll('.billing-tabs__tab'));
+        const select = proCard.querySelector('[data-pro-seats]');
+        const cta = proCard.querySelector('[data-pro-cta]');
+
+        let billing = 'monthly';
+
+        const updateCta = () => {
+          const option = select.options[select.selectedIndex];
+          const url =
+            billing === 'annual' ? option.dataset.annualUrl : option.dataset.monthlyUrl;
+
+          if (!url) {
+            cta.setAttribute('href', '#');
+            cta.setAttribute('aria-disabled', 'true');
+            cta.classList.add('is-disabled');
+            return;
+          }
+
+          cta.setAttribute('href', url);
+          cta.removeAttribute('aria-disabled');
+          cta.classList.remove('is-disabled');
+        };
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            billing = tab.dataset.billing || 'monthly';
+            tabs.forEach((btn) => {
+              const isActive = btn === tab;
+              btn.classList.toggle('is-active', isActive);
+              btn.setAttribute('aria-selected', String(isActive));
+            });
+            updateCta();
+          });
+        });
+
+        select.addEventListener('change', updateCta);
+        updateCta();
+      })();
+    </script>
   </body>
 </html>
