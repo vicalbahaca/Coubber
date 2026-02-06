@@ -152,7 +152,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;
-  min-height: 0;
+  min-height: 150px;
 }
 
 .plan-card__header > * {
