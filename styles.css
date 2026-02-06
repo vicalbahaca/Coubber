@@ -163,7 +163,7 @@ main {
 .plan-card__actions {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
   min-height: 0;
   padding-top: 0;
   padding-bottom: 0;
