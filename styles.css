@@ -161,8 +161,8 @@ main {
   flex-direction: column;
   gap: 10px;
   min-height: 110px;
-  padding-top: 4px;
-  padding-bottom: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-top: 1px solid #454545;
   border-bottom: 1px solid #454545;
 }
