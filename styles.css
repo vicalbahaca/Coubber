@@ -170,6 +170,10 @@ main {
   align-items: stretch;
 }
 
+.plan-card__actions .plan-card__cta {
+  margin-bottom: 8px;
+}
+
 .plan-card__select-spacer {
   height: 33px;
 }
