@@ -40,6 +40,99 @@ body {
   line-height: 1.4;
 }
 
+.enterprise-page {
+  background: #f4f4f2;
+  color: #151515;
+}
+
+.enterprise-hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.enterprise-hero__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2f7ff2;
+  margin: 0 0 12px;
+}
+
+.enterprise-hero h1 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.enterprise-hero__subtitle {
+  margin: 0 0 28px;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+.enterprise-hero__avatars {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.enterprise-hero__avatars img {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.enterprise-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+  display: grid;
+  gap: 16px;
+}
+
+.enterprise-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #2b2b2b;
+}
+
+.enterprise-form input,
+.enterprise-form textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  background: #fafafa;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.enterprise-form button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #80b99b;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .enterprise-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
 main {
   padding: 48px 16px 64px;
 }
