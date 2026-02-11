@@ -19,11 +19,11 @@ export function FinalCTASection() {
         <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-primary-50 via-white to-amber-50 p-10 shadow-xl md:p-14">
           <Reveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Ready to Transform Your Performance Analysis?
+              ¿Listo para transformar tu análisis de rendimiento?
             </h2>
             <p className="mt-4 text-base text-gray-700 md:text-lg">
-              See how Coubber turns your device data into coach-ready insights
-              in under 30 seconds.
+              Mira cómo Coubber convierte tus datos de dispositivos en insights
+              listos para entrenadores en menos de 30 segundos.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
@@ -39,4 +39,3 @@ export function FinalCTASection() {
     </Section>
   );
 }
-

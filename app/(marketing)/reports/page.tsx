@@ -9,9 +9,9 @@ import { Card } from "@/app/components/ui/card";
 import { REPORT_TEMPLATES } from "@/app/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Reports",
+  title: "Informes",
   description:
-    "Explore Coubber’s report templates built for performance, medical, and leadership workflows.",
+    "Explora las plantillas de informes de Coubber diseñadas para rendimiento, médico y dirección.",
 };
 
 export default function ReportsPage() {
@@ -21,18 +21,18 @@ export default function ReportsPage() {
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
-              Reports
+              Informes
             </h1>
             <p className="mt-5 text-base text-gray-600 md:text-lg">
-              A library of templates designed for performance, medical, and
-              leadership workflows — with AI interpretation built in.
+              Una biblioteca de plantillas diseñada para rendimiento, médico y
+              dirección — con interpretación de IA integrada.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="/demo">Book a Demo</Link>
+                <Link href="/demo">Acceso anticipado</Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
-                <Link href="#sample-report">See Sample Report</Link>
+                <Link href="#sample-report">Ver informe de muestra</Link>
               </Button>
             </div>
           </Reveal>
@@ -43,11 +43,11 @@ export default function ReportsPage() {
         <Container>
           <Reveal className="max-w-2xl space-y-3">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Report Library
+              Biblioteca de informes
             </h2>
             <p className="text-base text-gray-600 md:text-lg">
-              Start from templates that match how teams actually work — then
-              customize narratives, thresholds, and groupings.
+              Empieza con plantillas que reflejan cómo trabajan los equipos — y
+              luego personaliza narrativas, umbrales y agrupaciones.
             </p>
           </Reveal>
 
@@ -74,7 +74,7 @@ export default function ReportsPage() {
                   </div>
                   <div className="mt-6">
                     <Button asChild variant="secondary">
-                      <Link href="/demo">See it in a demo</Link>
+                      <Link href="/demo">Acceso anticipado</Link>
                     </Button>
                   </div>
                 </Card>
@@ -89,19 +89,19 @@ export default function ReportsPage() {
           <Reveal className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-                Sample Report Preview
+                Vista previa del informe de muestra
               </h2>
               <p className="text-base text-gray-600 md:text-lg">
-                Here&apos;s a simplified preview of what teams get: key trends,
-                flags, and an interpreted narrative that explains what changed —
-                and what to do next.
+                Aquí tienes una vista simplificada de lo que reciben los equipos:
+                tendencias clave, alertas y una narrativa interpretada que
+                explica qué cambió y qué hacer después.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <Link href="/demo">Request Demo</Link>
+                  <Link href="/demo">Solicitar acceso anticipado</Link>
                 </Button>
                 <Button asChild size="lg" variant="secondary">
-                  <Link href="/pricing">View Pricing</Link>
+                  <Link href="/pricing">Ver precios</Link>
                 </Button>
               </div>
             </div>
@@ -109,30 +109,30 @@ export default function ReportsPage() {
             <Card className="p-6 md:p-8">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-semibold text-gray-900">
-                  Weekly Microcycle Report
+                  Informe semanal de microciclo
                 </p>
                 <p className="text-xs font-semibold text-primary-700">
-                  Generated in ~30s
+                  Generado en ~30s
                 </p>
               </div>
 
               <div className="mt-5 rounded-xl border border-primary-600/15 bg-primary-50 p-4">
                 <p className="text-xs font-semibold text-primary-700">
-                  AI Interpretation
+                  Interpretación con IA
                 </p>
                 <p className="mt-2 text-sm font-semibold text-gray-900">
-                  Readiness decreased driven by reduced jump impulse and
-                  elevated high-speed load across two sessions.
+                  El readiness disminuyó por menor impulso de salto y mayor
+                  carga de alta velocidad en dos sesiones.
                 </p>
                 <p className="mt-2 text-sm text-gray-700">
-                  Recommendation: reduce peak speed exposure tomorrow, keep
-                  eccentric hamstring work, and re-test CMJ post-session.
+                  Recomendación: reduce la exposición a velocidad pico mañana,
+                  mantén trabajo excéntrico de isquios y re-test de CMJ post-sesión.
                 </p>
               </div>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-xl border border-gray-200 bg-white p-4">
-                  <p className="text-xs font-semibold text-gray-600">Load</p>
+                  <p className="text-xs font-semibold text-gray-600">Carga</p>
                   <p className="mt-1 text-2xl font-bold text-gray-900">+8%</p>
                   <div className="mt-3 h-2 rounded-full bg-gray-100">
                     <div className="h-2 w-2/3 rounded-full bg-primary-600" />
@@ -140,7 +140,7 @@ export default function ReportsPage() {
                 </div>
                 <div className="rounded-xl border border-gray-200 bg-white p-4">
                   <p className="text-xs font-semibold text-gray-600">Readiness</p>
-                  <p className="mt-1 text-2xl font-bold text-gray-900">Amber</p>
+                  <p className="mt-1 text-2xl font-bold text-gray-900">Ámbar</p>
                   <div className="mt-3 h-2 rounded-full bg-gray-100">
                     <div className="h-2 w-1/2 rounded-full bg-accent-600" />
                   </div>

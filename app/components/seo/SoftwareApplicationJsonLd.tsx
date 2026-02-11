@@ -8,7 +8,7 @@ export function SoftwareApplicationJsonLd() {
     applicationCategory: "SportsApplication",
     operatingSystem: "Web",
     description:
-      "AI-powered sports performance analysis platform that unifies athlete data and generates decision-ready reports in 30 seconds.",
+      "Plataforma de análisis de rendimiento deportivo con IA que unifica datos de atletas y genera informes listos para decidir en 30 segundos.",
     url: "https://coubber.com",
     offers: {
       "@type": "Offer",
@@ -26,4 +26,3 @@ export function SoftwareApplicationJsonLd() {
     />
   );
 }
-

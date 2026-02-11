@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { Button } from "@/app/components/ui/button";
@@ -8,7 +9,6 @@ import { Badge } from "@/app/components/ui/badge";
 import { Container } from "@/app/components/layout/Container";
 import { Section } from "@/app/components/layout/Section";
 import { PRIMARY_CTA, SECONDARY_CTA, TRUST_LOGOS } from "@/app/lib/constants";
-import { HeroDataFlowVisual } from "@/app/components/sections/home/HeroDataFlowVisual";
 
 const heroContainer = {
   initial: {},
@@ -41,12 +41,13 @@ export function HeroSection() {
             className="space-y-8"
           >
             <motion.div variants={heroItem} className="space-y-4">
+              <Badge variant="accent">Acceso anticipado</Badge>
               <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
-                Performance Reports in 30 Seconds, Not 30 Hours
+                Informes de rendimiento en 30 segundos, no 30 horas
               </h1>
               <p className="text-base text-gray-600 md:text-lg">
-                AI-powered analysis that unifies your athlete data and delivers
-                decision-ready insights for coaches and practitioners
+                Análisis con IA que unifica tus datos de atletas y entrega
+                insights listos para decidir para entrenadores y profesionales
               </p>
             </motion.div>
 
@@ -61,7 +62,7 @@ export function HeroSection() {
 
             <motion.div variants={heroItem} className="space-y-3">
               <p className="text-sm font-semibold text-gray-700">
-                Trusted by teams building faster workflows
+                Con la confianza de equipos que aceleran su flujo de trabajo
               </p>
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-3">
                 {TRUST_LOGOS.slice(0, 6).map((l) => (
@@ -76,7 +77,7 @@ export function HeroSection() {
               </div>
 
               <div className="flex flex-wrap gap-2 pt-2">
-                <Badge variant="primary">Force Plates</Badge>
+                <Badge variant="primary">Plataformas de fuerza</Badge>
                 <Badge variant="primary">VBT</Badge>
                 <Badge variant="primary">GPS</Badge>
                 <Badge variant="primary">Rehab</Badge>
@@ -90,14 +91,19 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             className="relative"
           >
-            <HeroDataFlowVisual />
-            <p className="mt-4 text-center text-sm text-gray-600">
-              Multiple sources → Coubber → report generated
-            </p>
+            <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
+              <Image
+                src="/files/home.png"
+                alt="Vista previa de reportes de Coubber"
+                width={1200}
+                height={900}
+                className="h-auto w-full"
+                priority
+              />
+            </div>
           </motion.div>
         </div>
       </Container>
     </Section>
   );
 }
-

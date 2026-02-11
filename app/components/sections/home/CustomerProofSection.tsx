@@ -19,11 +19,11 @@ export function CustomerProofSection() {
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-            Design Partners
+            Socios de diseño
           </h2>
           <p className="mt-4 text-base text-gray-600 md:text-lg">
-            Early teams are helping us shape the workflow, templates, and
-            integration priorities.
+            Equipos en etapa temprana nos ayudan a definir el flujo de trabajo,
+            las plantillas y las prioridades de integración.
           </p>
         </Reveal>
 
@@ -58,4 +58,3 @@ export function CustomerProofSection() {
     </Section>
   );
 }
-

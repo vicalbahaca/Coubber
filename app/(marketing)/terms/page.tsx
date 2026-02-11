@@ -4,8 +4,8 @@ import { Container } from "@/app/components/layout/Container";
 import { Section } from "@/app/components/layout/Section";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Coubber terms of service (prelaunch placeholder).",
+  title: "Términos de servicio",
+  description: "Términos de servicio de Coubber (placeholder de prelaunch).",
 };
 
 export default function TermsPage() {
@@ -14,15 +14,14 @@ export default function TermsPage() {
       <Container>
         <div className="mx-auto max-w-3xl space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-            Terms of Service
+            Términos de servicio
           </h1>
           <p className="text-base text-gray-600">
-            This is a prelaunch placeholder. We&apos;ll publish the full terms
-            before public launch.
+            Este es un placeholder de prelaunch. Publicaremos los términos
+            completos antes del lanzamiento público.
           </p>
         </div>
       </Container>
     </Section>
   );
 }
-

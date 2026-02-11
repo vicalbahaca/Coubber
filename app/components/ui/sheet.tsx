@@ -48,7 +48,7 @@ const SheetContent = React.forwardRef<
     >
       <SheetClose className="absolute right-4 top-4 rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-600/40">
         <X className="h-5 w-5" />
-        <span className="sr-only">Close</span>
+        <span className="sr-only">Cerrar</span>
       </SheetClose>
       {children}
     </DialogPrimitive.Content>
@@ -57,4 +57,3 @@ const SheetContent = React.forwardRef<
 SheetContent.displayName = DialogPrimitive.Content.displayName;
 
 export { Sheet, SheetTrigger, SheetClose, SheetContent };
-

@@ -16,11 +16,11 @@ export function PlatformAdvantagesSection() {
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-            Why Teams Choose Coubber
+            Por qué los equipos eligen Coubber
           </h2>
           <p className="mt-4 text-base text-gray-600 md:text-lg">
-            Faster reporting is great — but consistency, context, and trust are
-            what make the system stick.
+            Reportar más rápido es clave — pero consistencia, contexto y
+            confianza son lo que hace que el sistema se mantenga.
           </p>
         </Reveal>
 
@@ -46,4 +46,3 @@ export function PlatformAdvantagesSection() {
     </Section>
   );
 }
-

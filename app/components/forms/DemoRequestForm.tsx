@@ -63,7 +63,7 @@ export function DemoRequestForm() {
 
         if (!res.ok) {
           const text = await res.text().catch(() => "");
-          throw new Error(text || "Something went wrong. Please try again.");
+          throw new Error(text || "Algo salió mal. Inténtalo de nuevo.");
         }
       }
 
@@ -72,7 +72,7 @@ export function DemoRequestForm() {
     } catch (err) {
       setServerState({
         status: "error",
-        message: err instanceof Error ? err.message : "Submission failed.",
+        message: err instanceof Error ? err.message : "No se pudo enviar.",
       });
     }
   }
@@ -84,9 +84,9 @@ export function DemoRequestForm() {
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-0.5 h-5 w-5 text-success" />
             <div className="space-y-1">
-              <p className="font-semibold">Request received.</p>
+              <p className="font-semibold">Solicitud de acceso anticipado recibida.</p>
               <p className="text-emerald-800">
-                We&apos;ll get back to you in &lt; 24 hours. If it&apos;s urgent, email{" "}
+                Te responderemos en &lt; 24 horas. Si es urgente, escribe a{" "}
                 <a
                   className="font-semibold underline"
                   href="mailto:hello@coubber.com"
@@ -102,14 +102,14 @@ export function DemoRequestForm() {
 
       {serverState.status === "error" ? (
         <div className="rounded-xl border border-danger/20 bg-red-50 p-4 text-sm text-red-900">
-          <p className="font-semibold">Couldn&apos;t submit your request.</p>
+          <p className="font-semibold">No se pudo enviar tu solicitud.</p>
           <p className="mt-1 text-red-800">{serverState.message}</p>
         </div>
       ) : null}
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="firstName">First Name *</Label>
+          <Label htmlFor="firstName">Nombre *</Label>
           <Input
             id="firstName"
             autoComplete="given-name"
@@ -122,7 +122,7 @@ export function DemoRequestForm() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="lastName">Last Name *</Label>
+          <Label htmlFor="lastName">Apellido *</Label>
           <Input
             id="lastName"
             autoComplete="family-name"
@@ -151,7 +151,7 @@ export function DemoRequestForm() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="organization">Organization *</Label>
+          <Label htmlFor="organization">Organización *</Label>
           <Input
             id="organization"
             autoComplete="organization"
@@ -166,20 +166,20 @@ export function DemoRequestForm() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <Label>Role</Label>
+          <Label>Rol</Label>
           <Controller
             control={control}
             name="role"
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger aria-label="Role">
-                  <SelectValue placeholder="Select your role" />
+                <SelectTrigger aria-label="Rol">
+                  <SelectValue placeholder="Selecciona tu rol" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Performance Coach">Performance Coach</SelectItem>
-                  <SelectItem value="Medical Staff">Medical Staff</SelectItem>
-                  <SelectItem value="Director/Analyst">Director/Analyst</SelectItem>
-                  <SelectItem value="Other">Other</SelectItem>
+                  <SelectItem value="Preparador físico">Preparador físico</SelectItem>
+                  <SelectItem value="Equipo médico">Equipo médico</SelectItem>
+                  <SelectItem value="Director/Analista">Director/Analista</SelectItem>
+                  <SelectItem value="Otro">Otro</SelectItem>
                 </SelectContent>
               </Select>
             )}
@@ -187,21 +187,25 @@ export function DemoRequestForm() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="sport">Sport / Discipline</Label>
-          <Input id="sport" placeholder="e.g. Football, Rugby, Basketball" {...register("sport")} />
+          <Label htmlFor="sport">Deporte / Disciplina</Label>
+          <Input
+            id="sport"
+            placeholder="p. ej. fútbol, rugby, baloncesto"
+            {...register("sport")}
+          />
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <Label>Number of Athletes</Label>
+          <Label>Número de atletas</Label>
           <Controller
             control={control}
             name="athleteCount"
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger aria-label="Number of Athletes">
-                  <SelectValue placeholder="Select a range" />
+                <SelectTrigger aria-label="Número de atletas">
+                  <SelectValue placeholder="Selecciona un rango" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="1-20">1-20</SelectItem>
@@ -215,22 +219,22 @@ export function DemoRequestForm() {
         </div>
 
         <div className="space-y-2">
-          <Label>How did you hear about us?</Label>
+          <Label>¿Cómo nos conociste?</Label>
           <Controller
             control={control}
             name="heardFrom"
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger aria-label="How did you hear about us">
-                  <SelectValue placeholder="Optional" />
+                <SelectTrigger aria-label="Cómo nos conociste">
+                  <SelectValue placeholder="Opcional" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Referral">Referral</SelectItem>
-                  <SelectItem value="Conference/Event">Conference/Event</SelectItem>
+                  <SelectItem value="Recomendación">Recomendación</SelectItem>
+                  <SelectItem value="Conferencia/Evento">Conferencia/Evento</SelectItem>
                   <SelectItem value="LinkedIn">LinkedIn</SelectItem>
-                  <SelectItem value="Google/Search">Google/Search</SelectItem>
+                  <SelectItem value="Google/Búsqueda">Google/Búsqueda</SelectItem>
                   <SelectItem value="Podcast/Newsletter">Podcast/Newsletter</SelectItem>
-                  <SelectItem value="Other">Other</SelectItem>
+                  <SelectItem value="Otro">Otro</SelectItem>
                 </SelectContent>
               </Select>
             )}
@@ -239,10 +243,10 @@ export function DemoRequestForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">Mensaje</Label>
         <Textarea
           id="message"
-          placeholder="Tell us what devices, workflows, or report types you care about."
+          placeholder="Cuéntanos qué dispositivos, flujos de trabajo o tipos de informe te interesan."
           {...register("message")}
         />
       </div>
@@ -252,10 +256,10 @@ export function DemoRequestForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" />
-              Submitting…
+              Enviando…
             </>
           ) : (
-            "Request Demo"
+            "Solicitar acceso anticipado"
           )}
         </Button>
 
@@ -266,7 +270,8 @@ export function DemoRequestForm() {
           )}
         >
           <Mail className="h-4 w-4" />
-          Typical response time: <span className="font-semibold">&lt; 24 hours</span>
+          Tiempo de respuesta típico:{" "}
+          <span className="font-semibold">&lt; 24 horas</span>
         </div>
       </div>
     </form>

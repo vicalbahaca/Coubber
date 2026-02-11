@@ -58,20 +58,20 @@ export function ReportsSection() {
           <Reveal className="max-w-2xl space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-600/20 bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-700">
               <FileText className="h-4 w-4" />
-              Report templates
+              Plantillas de informes
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Report Library Built for Your Workflow
+              Biblioteca de informes hecha para tu flujo de trabajo
             </h2>
             <p className="text-base text-gray-600 md:text-lg">
-              Start from proven templates and adapt them to your sport, phase,
-              and internal standards.
+              Empieza con plantillas probadas y adáptalas a tu deporte, fase y
+              estándares internos.
             </p>
           </Reveal>
 
           <Reveal className="shrink-0">
             <Button asChild variant="secondary">
-              <Link href="/reports">Explore all report templates</Link>
+              <Link href="/reports">Explorar todas las plantillas</Link>
             </Button>
           </Reveal>
         </div>
@@ -98,8 +98,8 @@ export function ReportsSection() {
 
                   <motion.div variants={revealVariants} className="mt-4">
                     <div className="rounded-lg border border-primary-600/15 bg-primary-50 px-3 py-2 text-xs font-semibold text-primary-700">
-                      Hover preview: key flags, trend deltas, and a short AI
-                      narrative.
+                      Vista al pasar: alertas clave, deltas de tendencia y una
+                      narrativa breve con IA.
                     </div>
                   </motion.div>
                 </Card>
@@ -111,4 +111,3 @@ export function ReportsSection() {
     </Section>
   );
 }
-

@@ -16,11 +16,11 @@ export function ProblemFramingSection() {
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-            Your Data Shouldn&apos;t Be Your Bottleneck
+            Tus datos no deberían ser tu cuello de botella
           </h2>
           <p className="mt-4 text-base text-gray-600 md:text-lg">
-            You already collect the data. The problem is turning it into
-            consistent decisions fast enough to matter.
+            Ya recopilas los datos. El problema es convertirlos en decisiones
+            consistentes lo suficientemente rápido como para que importen.
           </p>
         </Reveal>
 
@@ -47,8 +47,8 @@ export function ProblemFramingSection() {
           <Reveal>
             <Card className="p-6 md:p-8">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-gray-900">Before</p>
-                <p className="text-sm text-gray-600">Manual reporting</p>
+                <p className="text-sm font-semibold text-gray-900">Antes</p>
+                <p className="text-sm text-gray-600">Reportes manuales</p>
               </div>
               <div className="mt-6 space-y-3">
                 <div className="h-3 w-4/5 rounded bg-gray-200" />
@@ -66,7 +66,7 @@ export function ProblemFramingSection() {
                 <div className="mt-6 h-20 rounded bg-gray-200" />
               </div>
               <p className="mt-6 text-sm text-gray-600">
-                Spreadsheets, exports, and formatting steal hours every week.
+                Hojas de cálculo, exportes y formateo roban horas cada semana.
               </p>
             </Card>
           </Reveal>
@@ -74,20 +74,21 @@ export function ProblemFramingSection() {
           <Reveal>
             <Card className="p-6 md:p-8">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-gray-900">After</p>
-                <p className="text-sm text-gray-600">Coubber reports</p>
+                <p className="text-sm font-semibold text-gray-900">Después</p>
+                <p className="text-sm text-gray-600">Informes de Coubber</p>
               </div>
               <div className="mt-6 rounded-xl border border-primary-600/20 bg-primary-50 p-4">
                 <p className="text-xs font-semibold text-primary-700">
-                  AI Interpretation
+                  Interpretación con IA
                 </p>
                 <p className="mt-2 text-sm font-semibold text-gray-900">
-                  Readiness is trending down due to reduced jump impulse and
-                  increased high-speed running load.
+                  El readiness va a la baja por menor impulso de salto y
+                  mayor carga de carrera a alta velocidad.
                 </p>
                 <p className="mt-2 text-sm text-gray-700">
-                  Recommendation: reduce peak speed exposure tomorrow, prioritize
-                  flywheel hamstring work, and re-test CMJ post-session.
+                  Recomendación: reduce la exposición a velocidad pico mañana,
+                  prioriza trabajo de isquiotibiales en flywheel y re-test de CMJ
+                  post-sesión.
                 </p>
               </div>
               <div className="mt-5 grid grid-cols-6 gap-2">
@@ -105,7 +106,7 @@ export function ProblemFramingSection() {
                 ))}
               </div>
               <p className="mt-6 text-sm text-gray-600">
-                Decision-ready insights your staff can act on immediately.
+                Insights listos para decidir que tu staff puede accionar al instante.
               </p>
             </Card>
           </Reveal>
@@ -114,4 +115,3 @@ export function ProblemFramingSection() {
     </Section>
   );
 }
-

@@ -83,23 +83,23 @@ export function HeroDataFlowVisual() {
         <div className="space-y-3">
           <SourceCard
             icon={Gauge}
-            title="Force Plates"
-            subtitle="Impulse • Asymmetry • RFD"
+            title="Plataformas de fuerza"
+            subtitle="Impulso • Asimetría • RFD"
           />
           <SourceCard
             icon={Dumbbell}
             title="VBT"
-            subtitle="Velocity • Power • Fatigue"
+            subtitle="Velocidad • Potencia • Fatiga"
           />
           <SourceCard
             icon={Activity}
-            title="GPS & Wearables"
-            subtitle="Load • HSR • HR"
+            title="GPS y wearables"
+            subtitle="Carga • HSR • FC"
           />
           <SourceCard
             icon={HeartPulse}
-            title="Rehab Testing"
-            subtitle="ROM • Dynamometry"
+            title="Testing rehab"
+            subtitle="ROM • Dinamometría"
           />
         </div>
 
@@ -109,12 +109,12 @@ export function HeroDataFlowVisual() {
           transition={{ duration: 5.5, ease: "easeInOut", repeat: Infinity }}
         >
           <div className="text-xs font-semibold text-primary-700">
-            Coubber Platform
+            Plataforma Coubber
           </div>
           <div className="mt-2 text-center text-sm font-semibold text-gray-900">
-            Athlete Profiles
+            Perfiles de atleta
             <br />
-            + Unified Metrics
+            + Métricas unificadas
           </div>
           <div className="mt-3 h-2 w-full rounded-full bg-gray-100">
             <motion.div
@@ -129,7 +129,7 @@ export function HeroDataFlowVisual() {
                 key={t}
                 className="rounded-lg bg-primary-50 px-2 py-2 text-center text-[10px] font-semibold text-primary-700"
               >
-                {t}
+                {t === "Load" ? "Carga" : t === "Readiness" ? "Readiness" : "Riesgo"}
               </div>
             ))}
           </div>
@@ -142,10 +142,10 @@ export function HeroDataFlowVisual() {
         >
           <div className="flex items-center justify-between">
             <div className="text-xs font-semibold text-gray-700">
-              Weekly Microcycle
+              Microciclo semanal
             </div>
             <div className="rounded-full bg-accent-600/10 px-2 py-1 text-[10px] font-semibold text-accent-700">
-              Generated
+              Generado
             </div>
           </div>
           <div className="mt-3 space-y-2">
@@ -183,4 +183,3 @@ export function HeroDataFlowVisual() {
     </div>
   );
 }
-

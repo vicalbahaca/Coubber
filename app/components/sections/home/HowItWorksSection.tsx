@@ -62,7 +62,7 @@ function StepVisual({ index }: { index: number }) {
         <div className="mt-2 h-3 w-2/3 rounded bg-gray-100" />
         <div className="mt-2 h-3 w-4/5 rounded bg-gray-100" />
         <div className="mt-3 inline-flex rounded-full bg-primary-50 px-2 py-1 text-[10px] font-semibold text-primary-700">
-          Explainable insight
+          Insight explicable
         </div>
       </div>
     );
@@ -87,11 +87,11 @@ export function HowItWorksSection() {
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-            From Raw Data to Decisions in 3 Steps
+            De datos crudos a decisiones en 3 pasos
           </h2>
           <p className="mt-4 text-base text-gray-600 md:text-lg">
-            Five actions, one workflow — designed to remove reporting friction
-            without losing context.
+            Cinco acciones, un solo flujo de trabajo — diseñado para eliminar
+            fricción en reportes sin perder contexto.
           </p>
         </Reveal>
 
@@ -131,4 +131,3 @@ export function HowItWorksSection() {
     </Section>
   );
 }
-

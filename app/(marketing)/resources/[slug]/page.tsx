@@ -23,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const resource = RESOURCES.find((r) => r.slug === slug);
-  if (!resource) return { title: "Resource" };
+  if (!resource) return { title: "Recurso" };
 
   return {
     title: resource.title,
@@ -57,34 +57,34 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
           <div className="mx-auto grid max-w-4xl gap-8">
             <Card className="p-6 md:p-8">
               <div className="prose prose-gray max-w-none">
-                <h2>Summary</h2>
+                <h2>Resumen</h2>
                 <p>
-                  This is a prelaunch placeholder article. The final resource
-                  will include examples, screenshots, and templates to help your
-                  team standardize reporting and decision-making.
+                  Este es un artículo placeholder de prelaunch. El recurso final
+                  incluirá ejemplos, capturas y plantillas para ayudar a tu
+                  equipo a estandarizar reportes y toma de decisiones.
                 </p>
 
-                <h2>Key Takeaways</h2>
+                <h2>Ideas clave</h2>
                 <ul>
-                  <li>Define metrics and thresholds before you automate.</li>
-                  <li>Prioritize decision-ready outputs over dashboard sprawl.</li>
-                  <li>Keep reporting consistent across roles and departments.</li>
+                  <li>Define métricas y umbrales antes de automatizar.</li>
+                  <li>Prioriza outputs listos para decidir sobre dashboards infinitos.</li>
+                  <li>Mantén los reportes consistentes entre roles y departamentos.</li>
                 </ul>
 
-                <h2>What Coubber Automates</h2>
+                <h2>Qué automatiza Coubber</h2>
                 <p>
-                  Coubber unifies athlete data across devices and generates
-                  interpreted reports in seconds — so your staff focuses on
-                  coaching and interventions, not formatting.
+                  Coubber unifica datos de atletas entre dispositivos y genera
+                  informes interpretados en segundos — para que tu staff se
+                  enfoque en coaching e intervenciones, no en formateo.
                 </p>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild>
-                  <Link href="/demo">Book a Demo</Link>
+                  <Link href="/demo">Acceso anticipado</Link>
                 </Button>
                 <Button asChild variant="secondary">
-                  <Link href="/resources">Back to Resources</Link>
+                  <Link href="/resources">Volver a recursos</Link>
                 </Button>
               </div>
             </Card>

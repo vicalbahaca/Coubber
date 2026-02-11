@@ -1,19 +1,19 @@
 export const SITE = {
   name: "Coubber",
-  tagline: "AI Performance Reports in 30 Seconds",
+  tagline: "Informes de rendimiento con IA en 30 segundos",
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Product", href: "/product" },
-  { label: "Reports", href: "/reports" },
-  { label: "Integrations", href: "/integrations" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Resources", href: "/resources" },
+  { label: "Producto", href: "/product" },
+  { label: "Informes", href: "/reports" },
+  { label: "Integraciones", href: "/integrations" },
+  { label: "Precios", href: "/pricing" },
+  { label: "Recursos", href: "/resources" },
 ] as const;
 
-export const PRIMARY_CTA = { label: "Book a Demo", href: "/demo" } as const;
+export const PRIMARY_CTA = { label: "Solicitar acceso anticipado", href: "/demo" } as const;
 export const SECONDARY_CTA = {
-  label: "See Sample Report",
+  label: "Ver informe de muestra",
   href: "/reports#sample-report",
 } as const;
 
@@ -27,107 +27,109 @@ export const TRUST_LOGOS = [
 ] as const;
 
 export const TRUST_STATS = [
-  { value: 40, suffix: "+", label: "data sources integrated" },
-  { value: 12, suffix: "", label: "sports deployed" },
-  { value: null, suffix: "", label: "Trusted by performance teams" },
+  { value: 40, suffix: "+", label: "fuentes de datos integradas" },
+  { value: 12, suffix: "", label: "deportes desplegados" },
+  { value: null, suffix: "", label: "Con la confianza de equipos de rendimiento" },
 ] as const;
 
 export const PROBLEM_POINTS = [
   {
-    title: "Hours wasted on manual reporting",
+    title: "Horas perdidas en reportes manuales",
     description:
-      "Your staff spends time formatting, cleaning, and rebuilding the same weekly slides.",
+      "Tu equipo invierte tiempo en formatear, limpiar y reconstruir las mismas diapositivas cada semana.",
   },
   {
-    title: "Data trapped in silos",
+    title: "Datos atrapados en silos",
     description:
-      "Force plates, VBT, GPS, rehab and wellness live in different tools and exports.",
+      "Plataformas de fuerza, VBT, GPS, rehab y bienestar viven en herramientas y exportaciones distintas.",
   },
   {
-    title: "Insights lost in spreadsheets",
+    title: "Insights perdidos en hojas de cálculo",
     description:
-      "Important signals hide behind tabs, pivots, and inconsistent athlete profiles.",
+      "Señales importantes se esconden entre pestañas, tablas dinámicas y perfiles inconsistentes.",
   },
 ] as const;
 
 export const HOW_IT_WORKS_STEPS = [
   {
-    title: "Collect",
-    description: "Connect devices & import data.",
+    title: "Recolectar",
+    description: "Conecta dispositivos e importa datos.",
   },
   {
-    title: "Unify",
-    description: "Automatic athlete profile consolidation.",
+    title: "Unificar",
+    description: "Consolidación automática de perfiles de atleta.",
   },
   {
-    title: "Analyze",
-    description: "AI processes metrics and patterns.",
+    title: "Analizar",
+    description: "La IA procesa métricas y patrones.",
   },
   {
-    title: "Interpret",
-    description: "Natural language insights generation.",
+    title: "Interpretar",
+    description: "Generación de insights en lenguaje natural.",
   },
   {
-    title: "Decide",
-    description: "Shareable reports with recommendations.",
+    title: "Decidir",
+    description: "Informes compartibles con recomendaciones.",
   },
 ] as const;
 
 export const REPORT_TEMPLATES = [
   {
-    title: "Weekly Microcycle Report",
-    description: "Weekly load, readiness, key flags, and coach-ready narrative.",
-  },
-  {
-    title: "Return-to-Play Dashboard",
+    title: "Informe semanal de microciclo",
     description:
-      "Rehab milestones, asymmetries, ROM progress, and return-to-training criteria.",
+      "Carga semanal, readiness, alertas clave y narrativa lista para entrenadores.",
   },
   {
-    title: "Readiness Assessment",
-    description: "Daily snapshot with explainable drivers behind green/amber/red.",
-  },
-  {
-    title: "Load Monitoring Report",
+    title: "Dashboard de retorno al juego",
     description:
-      "External + internal load trends, acute:chronic context, and risk signals.",
+      "Hitos de rehab, asimetrías, progreso de ROM y criterios de vuelta al entrenamiento.",
   },
   {
-    title: "Testing Session Analysis",
+    title: "Evaluación de readiness",
     description:
-      "Force-time, VBT outputs, best sets, and changes vs. baseline in one view.",
+      "Snapshot diario con drivers explicables detrás de verde/ámbar/rojo.",
   },
   {
-    title: "Injury Risk Profiling",
+    title: "Informe de monitoreo de carga",
     description:
-      "Multi-factor profile with contributing metrics and actionable follow-ups.",
+      "Tendencias de carga externa + interna, contexto agudo:crónico y señales de riesgo.",
+  },
+  {
+    title: "Análisis de sesión de testing",
+    description:
+      "Fuerza-tiempo, outputs VBT, mejores sets y cambios vs. línea base en una sola vista.",
+  },
+  {
+    title: "Perfilado de riesgo de lesión",
+    description:
+      "Perfil multifactor con métricas contribuyentes y siguientes pasos accionables.",
   },
 ] as const;
 
 export const INTEGRATION_CATEGORIES = [
   {
-    title: "Force Plates",
+    title: "Plataformas de fuerza",
     items: ["VALD ForceDecks", "Hawkin Dynamics"],
   },
   {
-    title: "Velocity-Based Training",
+    title: "Entrenamiento basado en velocidad",
     items: ["GymAware", "Vitruve", "PUSH", "ADR Encoder", "Swift"],
   },
   {
-    title: "Isoinertial / Flywheel",
+    title: "Isoinercial / Flywheel",
     items: ["Exxentric kBox"],
   },
   {
-    title: "Dynamometry & ROM Testing",
+    title: "Dinamometría y pruebas de ROM",
     items: ["Biodex", "Kinvent"],
   },
   {
-    title: "GPS & Wearables",
+    title: "GPS y wearables",
     items: ["Catapult", "STATSports", "WHOOP", "readyX (Wellness)"],
   },
   {
-    title: "CSV / Manual Import",
-    items: ["CSV Upload", "Google Sheets", "Manual Entry"],
+    title: "CSV / Carga manual",
+    items: ["Carga CSV", "Google Sheets", "Carga manual"],
   },
 ] as const;
 
@@ -160,33 +162,35 @@ export const API_HARDWARE_INTEGRATIONS = [
 
 export const DEVICE_TYPES = [
   {
-    name: "Linear encoders",
-    description: "Velocity + displacement for strength and rehab workflows.",
+    name: "Encoders lineales",
+    description:
+      "Velocidad + desplazamiento para fuerza y flujos de trabajo de rehab.",
     imageSrc: "/files/devices/linear-encoder.svg",
   },
   {
-    name: "Rotational encoders",
-    description: "Rotary measurement for flywheel and pulley-based systems.",
+    name: "Encoders rotacionales",
+    description:
+      "Medición rotatoria para flywheel y sistemas basados en poleas.",
     imageSrc: "/files/devices/rotational-encoder.svg",
   },
   {
-    name: "Strain gauges",
-    description: "Load cells for force measurement and instrumented setups.",
+    name: "Galgas extensiométricas",
+    description: "Celdas de carga para medición de fuerza y setups instrumentados.",
     imageSrc: "/files/devices/strain-gauge.svg",
   },
   {
-    name: "Force plates",
-    description: "Impulse, asymmetry, RFD and force-time diagnostics.",
+    name: "Plataformas de fuerza",
+    description: "Impulso, asimetrías, RFD y diagnóstico fuerza-tiempo.",
     imageSrc: "/files/devices/force-plate.svg",
   },
   {
-    name: "Contact platforms",
-    description: "Jump timing and contact metrics across protocols.",
+    name: "Plataformas de contacto",
+    description: "Timing de salto y métricas de contacto en distintos protocolos.",
     imageSrc: "/files/devices/contact-platform.svg",
   },
   {
-    name: "Dynamometers",
-    description: "Strength testing and return-to-play monitoring.",
+    name: "Dinamómetros",
+    description: "Testing de fuerza y seguimiento de return-to-play.",
     imageSrc: "/files/devices/dynamometer.svg",
   },
 ] as const;
@@ -194,76 +198,76 @@ export const DEVICE_TYPES = [
 export const ROLE_USE_CASES = [
   {
     key: "performance",
-    label: "Performance Coaches",
-    headline: "Optimize training load and athlete readiness",
+    label: "Preparadores físicos",
+    headline: "Optimiza la carga de entrenamiento y el readiness",
     bullets: [
-      "Spot readiness drops before they become missed sessions",
-      "Compare microcycles, drills, and position groups in one view",
-      "Share coach-ready PDFs without rebuilding decks",
+      "Detecta caídas de readiness antes de perder sesiones",
+      "Compara microciclos, ejercicios y grupos por posición en una vista",
+      "Comparte PDFs listos para entrenadores sin rehacer presentaciones",
     ],
   },
   {
     key: "medical",
-    label: "Medical Staff",
-    headline: "Track rehab progress and return-to-play metrics",
+    label: "Equipo médico",
+    headline: "Sigue el progreso de rehab y métricas de return-to-play",
     bullets: [
-      "Monitor asymmetries, ROM, and tolerance across phases",
-      "Standardize RTP criteria and documentation",
-      "Align stakeholders with clear status + next steps",
+      "Monitorea asimetrías, ROM y tolerancia por fases",
+      "Estandariza criterios y documentación de RTP",
+      "Alinea a las partes interesadas con estado y próximos pasos claros",
     ],
   },
   {
     key: "directors",
-    label: "Directors/Analysts",
-    headline: "Unified dashboards for strategic decisions",
+    label: "Directores/Analistas",
+    headline: "Dashboards unificados para decisiones estratégicas",
     bullets: [
-      "Consistent athlete profiles across departments",
-      "Audit-ready reporting history by session, block, or season",
-      "Scale insights across teams without adding headcount",
+      "Perfiles de atleta consistentes entre departamentos",
+      "Histórico de reportes listo para auditoría por sesión, bloque o temporada",
+      "Escala insights entre equipos sin añadir personal",
     ],
   },
 ] as const;
 
 export const ADVANTAGES = [
   {
-    title: "Automated Interpretation",
-    description: "AI narratives, not just charts.",
+    title: "Interpretación automatizada",
+    description: "Narrativas con IA, no solo gráficos.",
   },
   {
-    title: "30-Second Generation",
-    description: "From upload to insights instantly.",
+    title: "Generación en 30 segundos",
+    description: "Desde la carga hasta el insight, al instante.",
   },
   {
-    title: "Unlimited Data Sources",
-    description: "Device-agnostic integration.",
+    title: "Fuentes de datos ilimitadas",
+    description: "Integración agnóstica a dispositivos.",
   },
   {
-    title: "Shareable PDFs",
-    description: "Board-ready reports for stakeholders.",
+    title: "PDFs compartibles",
+    description: "Informes listos para partes interesadas.",
   },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "Coubber cut our weekly reporting time from 6 hours to 30 minutes. The AI interpretation helps us spot patterns we'd miss manually.",
+      "Coubber redujo nuestro tiempo de reportes semanales de 6 horas a 30 minutos. La interpretación con IA nos ayuda a detectar patrones que se nos escapaban.",
     name: "David Thompson",
-    role: "Head of Performance",
-    org: "European Football Academy (Design Partner)",
+    role: "Director de rendimiento",
+    org: "European Football Academy (Socio de diseño)",
   },
   {
     quote:
-      "The unified athlete profiles finally keep strength, GPS, and medical notes aligned — no more chasing exports on match week.",
+      "Los perfiles unificados por fin mantienen alineados fuerza, GPS y notas médicas — adiós a perseguir exportaciones en semana de partido.",
     name: "Sofia Martinez",
-    role: "Sports Scientist",
-    org: "Top Division Rugby Program (Design Partner)",
+    role: "Científica del deporte",
+    org: "Top Division Rugby Program (Socio de diseño)",
   },
   {
     quote:
-      "Our medical team loves the return-to-play view. It turns testing sessions into clear next steps that coaches actually use.",
+      "Nuestro equipo médico ama la vista de return-to-play. Convierte las sesiones de testing en siguientes pasos claros que los entrenadores usan.",
     name: "Chris Lee",
-    role: "Rehab Lead",
-    org: "High-Performance Institute (Design Partner)",
+    role: "Responsable de rehab",
+    org: "High-Performance Institute (Socio de diseño)",
   },
 ] as const;
 
@@ -273,65 +277,65 @@ export const PRICING = {
     monthlyPerAthleteEur: 14,
     annualDiscount: 0.2,
     features: [
-      "Automated report generation",
-      "40+ data source integrations",
-      "Shareable PDF exports",
+      "Generación automática de informes",
+      "40+ integraciones de fuentes de datos",
+      "Exportes PDF compartibles",
     ],
   },
   enterprise: {
     name: "Enterprise",
-    priceLabel: "Custom",
-    features: ["Advanced security", "Custom integrations", "Dedicated support"],
+    priceLabel: "A medida",
+    features: ["Seguridad avanzada", "Integraciones a medida", "Soporte dedicado"],
   },
 } as const;
 
 export const RESOURCES = [
   {
     slug: "microcycle-reporting-playbook",
-    title: "Microcycle Reporting Playbook",
+    title: "Guía de reportes de microciclo",
     description:
-      "A practical framework for weekly reporting that coaches actually use — with examples and pitfalls to avoid.",
-    category: "Reporting",
+      "Un framework práctico para reportes semanales que los entrenadores usan — con ejemplos y errores a evitar.",
+    category: "Reportes",
     readingTime: "6 min",
   },
   {
     slug: "return-to-play-metrics-checklist",
-    title: "Return-to-Play Metrics Checklist",
+    title: "Checklist de métricas de Return-to-Play",
     description:
-      "A template to standardize RTP documentation across strength, medical, and coaching stakeholders.",
+      "Plantilla para estandarizar la documentación de RTP entre fuerza, médico y staff técnico.",
     category: "Rehab",
     readingTime: "5 min",
   },
   {
     slug: "force-plate-to-decision-workflow",
-    title: "From Force Plate Data to Decisions",
+    title: "De datos de plataforma de fuerza a decisiones",
     description:
-      "How to connect force-time outputs to readiness context without drowning in dashboards.",
+      "Cómo conectar force-time con el contexto de readiness sin ahogarte en dashboards.",
     category: "Testing",
     readingTime: "7 min",
   },
   {
     slug: "vbt-reporting-template",
-    title: "VBT Reporting Template (What to Track Weekly)",
+    title: "Plantilla de reportes VBT (qué seguir semanalmente)",
     description:
-      "A lightweight approach to velocity-based training reporting that keeps signal over noise.",
-    category: "Strength",
+      "Un enfoque ligero para reportes VBT que prioriza señal sobre ruido.",
+    category: "Fuerza",
     readingTime: "4 min",
   },
   {
     slug: "load-monitoring-red-flags",
-    title: "Load Monitoring Red Flags (and What to Do Next)",
+    title: "Alertas en monitoreo de carga (y qué hacer después)",
     description:
-      "A decision-first checklist for interpreting spikes, trends, and context across match weeks.",
-    category: "Load",
+      "Checklist orientada a decisión para interpretar picos, tendencias y contexto en semana de partido.",
+    category: "Carga",
     readingTime: "8 min",
   },
   {
     slug: "integration-mapping-guide",
-    title: "Integration Mapping Guide",
+    title: "Guía de mapeo de integraciones",
     description:
-      "A simple method to map devices, exports, and naming conventions into a unified athlete profile.",
-    category: "Integrations",
+      "Método simple para mapear dispositivos, exportaciones y nomenclaturas en un perfil unificado.",
+    category: "Integraciones",
     readingTime: "6 min",
   },
 ] as const;

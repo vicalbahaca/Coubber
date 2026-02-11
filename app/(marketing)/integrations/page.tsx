@@ -15,9 +15,9 @@ import {
 } from "@/app/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Integrations",
+  title: "Integraciones",
   description:
-    "Connect force plates, VBT systems, GPS wearables, and more. Bring all athlete data into one platform.",
+    "Conecta plataformas de fuerza, sistemas VBT, wearables GPS y más. Lleva todos los datos a una sola plataforma.",
 };
 
 export default function IntegrationsPage() {
@@ -27,19 +27,20 @@ export default function IntegrationsPage() {
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
-              Integrations
+              Integraciones
             </h1>
             <p className="mt-5 text-base text-gray-600 md:text-lg">
-              Bring force plates, VBT, GPS, flywheels, dynamometry and rehab
-              testing into one platform — without breaking your existing stack.
+              Lleva plataformas de fuerza, VBT, GPS, flywheels, dinamometría y
+              testing de rehab a una sola plataforma — sin romper tu stack
+              actual.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="/demo">Book a Demo</Link>
+                <Link href="/demo">Acceso anticipado</Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
                 <a href="mailto:hello@coubber.com?subject=Integration%20request">
-                  Request an integration
+                  Solicitar integración
                 </a>
               </Button>
             </div>
@@ -51,11 +52,12 @@ export default function IntegrationsPage() {
         <Container>
           <Reveal className="max-w-2xl space-y-3">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Supported Data Sources
+              Fuentes de datos soportadas
             </h2>
             <p className="text-base text-gray-600 md:text-lg">
-              We&apos;re expanding integrations continuously. If you don&apos;t see your
-              device, tell us — we&apos;ll prioritize based on design partner needs.
+              Seguimos ampliando integraciones. Si no ves tu dispositivo,
+              cuéntanoslo — priorizaremos según las necesidades de los socios de
+              diseño.
             </p>
           </Reveal>
 
@@ -73,7 +75,7 @@ export default function IntegrationsPage() {
                   </div>
                   <div className="mt-6">
                     <Button asChild variant="secondary">
-                      <Link href="/demo">See your workflow</Link>
+                      <Link href="/demo">Acceso anticipado</Link>
                     </Button>
                   </div>
                 </Card>
@@ -85,12 +87,12 @@ export default function IntegrationsPage() {
             <Reveal>
               <Card className="h-full p-6 md:p-8">
                 <h2 className="text-2xl font-semibold text-gray-900">
-                  API-connected hardware
+                  Hardware conectado por API
                 </h2>
                 <p className="mt-3 text-sm text-gray-600">
-                  These integrations connect directly via API. If you use
-                  additional Chronojump or MyJumpLab apps, tell us and we&apos;ll map
-                  the fields to your reporting templates.
+                  Estas integraciones conectan directamente por API. Si usas
+                  aplicaciones adicionales de Chronojump o MyJumpLab, dínoslo y
+                  mapeamos los campos a tus plantillas de reportes.
                 </p>
 
                 <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -119,7 +121,7 @@ export default function IntegrationsPage() {
 
                 <div className="mt-8">
                   <Button asChild>
-                    <Link href="/demo">Book a Demo</Link>
+                    <Link href="/demo">Acceso anticipado</Link>
                   </Button>
                 </div>
               </Card>
@@ -128,11 +130,11 @@ export default function IntegrationsPage() {
             <Reveal>
               <Card className="h-full p-6 md:p-8">
                 <h2 className="text-2xl font-semibold text-gray-900">
-                  Device types
+                  Tipos de dispositivos
                 </h2>
                 <p className="mt-3 text-sm text-gray-600">
-                  Coubber is built for real hardware outputs across strength,
-                  rehab, and monitoring.
+                  Coubber está pensado para outputs reales de hardware en fuerza,
+                  rehab y monitoreo.
                 </p>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">

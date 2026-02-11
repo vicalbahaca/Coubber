@@ -13,9 +13,9 @@ import { TrustLayerSection } from "@/app/components/sections/home/TrustLayerSect
 import { UseCasesByRoleSection } from "@/app/components/sections/home/UseCasesByRoleSection";
 
 export const metadata: Metadata = {
-  title: "Coubber - AI Performance Reports in 30 Seconds",
+  title: "Coubber - Informes de rendimiento con IA en 30 segundos",
   description:
-    "AI-powered analysis that unifies your athlete data and delivers decision-ready insights for coaches and practitioners.",
+    "Análisis con IA que unifica datos de atletas y entrega insights listos para decidir para entrenadores y profesionales.",
 };
 
 export default function HomePage() {

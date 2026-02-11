@@ -5,15 +5,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://coubber.com"),
   title: {
-    default: "Coubber — AI Performance Reports in 30 Seconds",
+    default: "Coubber — Informes de rendimiento con IA en 30 segundos",
     template: "%s — Coubber",
   },
   description:
-    "Automated sports performance analysis platform. Unify athlete data from force plates, VBT, GPS and more. Generate decision-ready reports instantly.",
+    "Plataforma automatizada de análisis de rendimiento deportivo. Unifica datos de atletas desde plataformas de fuerza, VBT, GPS y más. Genera informes listos para decidir al instante.",
   openGraph: {
-    title: "Coubber — AI Performance Reports in 30 Seconds",
+    title: "Coubber — Informes de rendimiento con IA en 30 segundos",
     description:
-      "AI-powered analysis that unifies athlete data and delivers decision-ready insights for coaches and practitioners.",
+      "Análisis con IA que unifica datos de atletas y entrega insights listos para decidir para entrenadores y profesionales.",
     type: "website",
     siteName: "Coubber",
   },

@@ -11,22 +11,22 @@ import { cn } from "@/app/lib/utils";
 type Billing = "monthly" | "annual";
 
 const STANDARD_FEATURES = [
-  "Automated report generation",
-  "40+ data source integrations",
-  "Shareable PDF exports",
-  "Mobile & web access",
-  "Standard report templates",
-  "Email support",
+  "Generación automática de informes",
+  "40+ integraciones de fuentes de datos",
+  "Exportes PDF compartibles",
+  "Acceso móvil y web",
+  "Plantillas estándar de informes",
+  "Soporte por email",
 ] as const;
 
 const ENTERPRISE_ADDITIONALS = [
-  "SSO & advanced security",
-  "Custom report templates",
-  "Priority integrations",
-  "API access & webhooks",
-  "Dedicated onboarding",
-  "24/7 priority support",
-  "Custom data retention",
+  "SSO y seguridad avanzada",
+  "Plantillas de informes a medida",
+  "Integraciones prioritarias",
+  "Acceso a API y webhooks",
+  "Onboarding dedicado",
+  "Soporte prioritario 24/7",
+  "Retención de datos a medida",
 ] as const;
 
 const ATHLETE_TIERS = [
@@ -58,7 +58,7 @@ export function PricingTable() {
     <div className="space-y-10">
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="text-sm text-gray-600">
-          Toggle billing to see annual savings.
+          Cambia la facturación para ver el ahorro anual.
         </div>
         <div className="inline-flex items-center rounded-lg border border-gray-200 bg-white p-1 shadow-sm">
           <button
@@ -71,7 +71,7 @@ export function PricingTable() {
                 : "text-gray-700 hover:bg-gray-100",
             )}
           >
-            Monthly
+            Mensual
           </button>
           <button
             type="button"
@@ -83,9 +83,9 @@ export function PricingTable() {
                 : "text-gray-700 hover:bg-gray-100",
             )}
           >
-            Annual
+            Anual
             <span className="ml-2 rounded-full bg-accent-600/10 px-2 py-0.5 text-[10px] font-bold text-accent-700">
-              Save 20%
+              Ahorra 20%
             </span>
           </button>
         </div>
@@ -101,22 +101,22 @@ export function PricingTable() {
                 {formatEur(perAthlete)}
                 <span className="text-base font-semibold text-gray-600">
                   {" "}
-                  / athlete / month
+                  / atleta / mes
                 </span>
               </p>
               <p className="mt-2 text-sm text-gray-600">
-                {billing === "annual" ? "Billed annually." : "Billed monthly."}
+                {billing === "annual" ? "Facturación anual." : "Facturación mensual."}
               </p>
             </div>
 
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-600/20 bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-700">
               <Sparkles className="h-4 w-4" />
-              Prelaunch
+              Prelanzamiento
             </div>
           </div>
 
           <div className="mt-7">
-            <p className="text-sm font-semibold text-gray-900">Athletes</p>
+            <p className="text-sm font-semibold text-gray-900">Atletas</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {ATHLETE_TIERS.map((tier) => (
                 <button
@@ -135,16 +135,16 @@ export function PricingTable() {
               ))}
             </div>
             <p className="mt-3 text-sm text-gray-600">
-              Estimated total:{" "}
+              Total estimado:{" "}
               <span className="font-semibold text-gray-900">
                 {formatEur(estimatedTotal)}
               </span>
-              <span className="text-gray-600"> / month</span>
+              <span className="text-gray-600"> / mes</span>
             </p>
           </div>
 
           <div className="mt-7">
-            <p className="text-sm font-semibold text-gray-900">What you get</p>
+            <p className="text-sm font-semibold text-gray-900">Qué incluye</p>
             <div className="mt-4 space-y-3 text-sm text-gray-700">
               {STANDARD_FEATURES.map((f) => (
                 <div key={f} className="flex gap-3">
@@ -157,12 +157,12 @@ export function PricingTable() {
 
           <div className="mt-8">
             <Button asChild className="w-full" size="lg">
-              <Link href="/demo">Start Free Trial</Link>
+              <Link href="/demo">Solicitar acceso anticipado</Link>
             </Button>
             <p className="mt-3 text-center text-sm text-gray-600">
-              Not sure?{" "}
+              ¿Tienes dudas?{" "}
               <Link href="/demo" className="font-semibold text-primary-700">
-                Book a Demo
+                Solicita acceso anticipado
               </Link>
             </p>
           </div>
@@ -173,17 +173,17 @@ export function PricingTable() {
           <div>
             <p className="text-sm font-semibold text-gray-700">ENTERPRISE</p>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
-              Custom pricing
+              Precio a medida
             </p>
             <p className="mt-2 text-sm text-gray-600">
-              Built for multi-team deployments, strict governance, and advanced
-              integrations.
+              Pensado para despliegues multi-equipo, gobernanza estricta e
+              integraciones avanzadas.
             </p>
           </div>
 
           <div className="mt-7">
             <p className="text-sm font-semibold text-gray-900">
-              Everything in Standard, plus:
+              Todo en Standard, más:
             </p>
             <div className="mt-4 space-y-3 text-sm text-gray-700">
               {ENTERPRISE_ADDITIONALS.map((f) => (
@@ -197,10 +197,11 @@ export function PricingTable() {
 
           <div className="mt-8">
             <Button asChild className="w-full" size="lg" variant="secondary">
-              <Link href="/demo">Request Info</Link>
+              <Link href="/demo">Solicitar info</Link>
             </Button>
             <p className="mt-3 text-center text-sm text-gray-600">
-              Typical response time: <span className="font-semibold">&lt; 24 hours</span>
+              Tiempo de respuesta típico:{" "}
+              <span className="font-semibold">&lt; 24 horas</span>
             </p>
           </div>
         </Card>

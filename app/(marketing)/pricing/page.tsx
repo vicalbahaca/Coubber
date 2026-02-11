@@ -6,9 +6,9 @@ import { Section } from "@/app/components/layout/Section";
 import { Reveal } from "@/app/components/animations/Reveal";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "Precios",
   description:
-    "Transparent pricing that scales with your team — from standard plans to enterprise deployments.",
+    "Precios transparentes que escalan con tu equipo — desde planes estándar hasta enterprise.",
 };
 
 export default function PricingPage() {
@@ -18,12 +18,12 @@ export default function PricingPage() {
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
-              Pricing
+              Precios
             </h1>
             <p className="mt-5 text-base text-gray-600 md:text-lg">
-              Transparent pricing that scales with your team. Choose Standard
-              for fast deployment — or Enterprise for advanced integrations,
-              security, and support.
+              Precios transparentes que escalan con tu equipo. Elige Standard
+              para un despliegue rápido — o Enterprise para integraciones,
+              seguridad y soporte avanzados.
             </p>
           </Reveal>
         </Container>

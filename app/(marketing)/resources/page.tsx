@@ -10,9 +10,9 @@ import { Badge } from "@/app/components/ui/badge";
 import { RESOURCES } from "@/app/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Recursos",
   description:
-    "Guides, templates, and research notes on performance reporting, athlete monitoring, and applied sports science.",
+    "Guías, plantillas y notas sobre reportes de rendimiento, monitoreo de atletas y ciencia aplicada al deporte.",
 };
 
 export default function ResourcesPage() {
@@ -22,11 +22,11 @@ export default function ResourcesPage() {
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl">
-              Resources
+              Recursos
             </h1>
             <p className="mt-5 text-base text-gray-600 md:text-lg">
-              Guides, templates, and checklists on performance reporting and
-              athlete monitoring — written for practitioners.
+              Guías, plantillas y checklists sobre reportes de rendimiento y
+              monitoreo de atletas — escritos para profesionales.
             </p>
           </Reveal>
         </Container>
@@ -36,11 +36,11 @@ export default function ResourcesPage() {
         <Container>
           <Reveal className="max-w-2xl space-y-3">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Latest
+              Últimos
             </h2>
             <p className="text-base text-gray-600 md:text-lg">
-              Prelaunch content is rolling out. Start with these foundational
-              resources.
+              Estamos publicando contenido de prelaunch. Empieza con estos
+              recursos base.
             </p>
           </Reveal>
 
@@ -63,7 +63,7 @@ export default function ResourcesPage() {
                       href={`/resources/${r.slug}`}
                       className="text-sm font-semibold text-primary-700 hover:text-primary-800"
                     >
-                      Read →
+                      Leer →
                     </Link>
                   </div>
                 </Card>

@@ -29,7 +29,7 @@ const categoryIcons = [Gauge, Dumbbell, Repeat2, Ruler, MapPinned, ArrowDownToLi
 
 function IntegrationsFlowVisual() {
   const nodes = [
-    { label: "Force Plates", x: 90, y: 60 },
+    { label: "Plataformas de fuerza", x: 90, y: 60 },
     { label: "VBT", x: 330, y: 40 },
     { label: "Flywheel", x: 510, y: 120 },
     { label: "GPS", x: 520, y: 260 },
@@ -71,7 +71,7 @@ function IntegrationsFlowVisual() {
       >
         <div className="text-xs font-semibold text-primary-700">Coubber</div>
         <div className="mt-2 text-sm font-semibold text-gray-900">
-          Unified Data
+          Datos unificados
         </div>
         <div className="mt-3 h-2 w-full rounded-full bg-gray-100">
           <motion.div
@@ -112,12 +112,12 @@ export function IntegrationsSection() {
           <div>
             <Reveal className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-                All Your Data, One Platform
+                Todos tus datos, una sola plataforma
               </h2>
               <p className="text-base text-gray-600 md:text-lg">
-                Connect the tools you already use. Coubber consolidates athlete
-                profiles, aligns naming, and keeps reporting consistent across
-                departments.
+                Conecta las herramientas que ya usas. Coubber consolida perfiles
+                de atleta, alinea nomenclaturas y mantiene los reportes
+                consistentes entre departamentos.
               </p>
             </Reveal>
 
@@ -150,7 +150,7 @@ export function IntegrationsSection() {
 
             <Reveal className="mt-8">
               <Button asChild variant="secondary">
-                <Link href="/integrations">View all integrations</Link>
+                <Link href="/integrations">Ver todas las integraciones</Link>
               </Button>
             </Reveal>
           </div>
@@ -164,11 +164,11 @@ export function IntegrationsSection() {
           <Reveal>
             <Card className="h-full p-6 md:p-8">
               <h3 className="text-xl font-semibold text-gray-900">
-                API-connected hardware
+                Hardware conectado por API
               </h3>
               <p className="mt-2 text-sm text-gray-600">
-                Direct API integrations for practitioner-grade tools and
-                wearables.
+                Integraciones directas por API para herramientas de
+                profesionales y wearables.
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -200,10 +200,10 @@ export function IntegrationsSection() {
           <Reveal>
             <Card className="h-full p-6 md:p-8">
               <h3 className="text-xl font-semibold text-gray-900">
-                Device types supported
+                Tipos de dispositivos soportados
               </h3>
               <p className="mt-2 text-sm text-gray-600">
-                Built to ingest real hardware outputs — not just CSVs.
+                Diseñado para ingerir outputs reales de hardware, no solo CSVs.
               </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">

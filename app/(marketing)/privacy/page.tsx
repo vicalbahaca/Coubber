@@ -4,8 +4,8 @@ import { Container } from "@/app/components/layout/Container";
 import { Section } from "@/app/components/layout/Section";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Coubber privacy policy (prelaunch placeholder).",
+  title: "Política de privacidad",
+  description: "Política de privacidad de Coubber (placeholder de prelaunch).",
 };
 
 export default function PrivacyPage() {
@@ -14,15 +14,14 @@ export default function PrivacyPage() {
       <Container>
         <div className="mx-auto max-w-3xl space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-            Privacy Policy
+            Política de privacidad
           </h1>
           <p className="text-base text-gray-600">
-            This is a prelaunch placeholder. We&apos;ll publish the full privacy
-            policy before public launch.
+            Este es un placeholder de prelaunch. Publicaremos la política
+            completa antes del lanzamiento público.
           </p>
         </div>
       </Container>
     </Section>
   );
 }
-

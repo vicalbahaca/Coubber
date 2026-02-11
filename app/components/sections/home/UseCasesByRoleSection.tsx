@@ -21,7 +21,7 @@ function RolePreview({ title }: { title: string }) {
       <div className="flex items-center justify-between">
         <div className="text-xs font-semibold text-gray-700">{title}</div>
         <div className="rounded-full bg-primary-50 px-2 py-1 text-[10px] font-semibold text-primary-700">
-          Role view
+          Vista por rol
         </div>
       </div>
       <div className="mt-3 space-y-2">
@@ -49,11 +49,11 @@ export function UseCasesByRoleSection() {
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-            Built for Your Role
+            Hecho para tu rol
           </h2>
           <p className="mt-4 text-base text-gray-600 md:text-lg">
-            Different stakeholders need different views — without breaking the
-            underlying data model.
+            Distintas partes interesadas necesitan distintas vistas — sin romper
+            el modelo de datos.
           </p>
         </Reveal>
 
@@ -92,10 +92,10 @@ export function UseCasesByRoleSection() {
                     </Reveal>
 
                     <Reveal>
-                      <RolePreview title={`${r.label} dashboard`} />
+                      <RolePreview title={`Dashboard para ${r.label}`} />
                       <p className="mt-4 text-sm text-gray-600">
-                        Consistent terminology and definitions across staff — so
-                        everyone is aligned.
+                        Terminología y definiciones consistentes entre el staff —
+                        para que todos estén alineados.
                       </p>
                     </Reveal>
                   </div>
@@ -108,4 +108,3 @@ export function UseCasesByRoleSection() {
     </Section>
   );
 }
-

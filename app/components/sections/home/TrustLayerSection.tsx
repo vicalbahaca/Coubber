@@ -17,15 +17,15 @@ export function TrustLayerSection() {
           <Reveal className="space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary-600/20 bg-primary-50 px-3 py-1 text-sm font-semibold text-primary-700">
               <ShieldCheck className="h-4 w-4" />
-              Built with practitioners from elite sports
+              Construido con profesionales del deporte de élite
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Credibility you can feel in the workflow
+              Credibilidad que se siente en el flujo de trabajo
             </h2>
             <p className="text-base text-gray-600 md:text-lg">
-              Designed with performance and medical teams who live in messy data
-              realities — match weeks, testing blocks, return-to-play, and
-              everything in between.
+              Diseñado con equipos de rendimiento y médicos que viven realidades
+              de datos complejas — semanas de partido, bloques de testing,
+              return-to-play y todo lo intermedio.
             </p>
           </Reveal>
 
@@ -39,7 +39,7 @@ export function TrustLayerSection() {
                     ) : (
                       <span className="inline-flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-success" />
-                        Yes
+                        Sí
                       </span>
                     )}
                   </div>
@@ -55,4 +55,3 @@ export function TrustLayerSection() {
     </Section>
   );
 }
-

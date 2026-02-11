@@ -21,7 +21,7 @@ export function MarketingFooter() {
               <span className="font-semibold text-gray-900">{SITE.name}</span>
             </div>
             <p className="text-sm text-gray-600">
-              AI-powered performance reporting for modern sports teams.
+              Reporting de rendimiento con IA para equipos deportivos modernos.
             </p>
             <div>
               <Link
@@ -34,7 +34,7 @@ export function MarketingFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900">Product</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Producto</h3>
             <ul className="mt-4 space-y-2 text-sm">
               {NAV_LINKS.map((item) => (
                 <li key={item.href}>
@@ -50,14 +50,14 @@ export function MarketingFooter() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900">Resources</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Recursos</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
                 <Link
                   href="/resources"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Resources Hub
+                  Hub de recursos
                 </Link>
               </li>
               <li>
@@ -65,7 +65,7 @@ export function MarketingFooter() {
                   href="mailto:hello@coubber.com"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Contact
+                  Contacto
                 </a>
               </li>
             </ul>
@@ -94,7 +94,7 @@ export function MarketingFooter() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-gray-200 pt-8 text-sm text-gray-600 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+            © {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-4">
             <a
