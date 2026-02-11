@@ -9,6 +9,7 @@ import { Badge } from "@/app/components/ui/badge";
 import { Container } from "@/app/components/layout/Container";
 import { Section } from "@/app/components/layout/Section";
 import { PRIMARY_CTA, SECONDARY_CTA, TRUST_LOGOS } from "@/app/lib/constants";
+import { withBasePath } from "@/app/lib/utils";
 
 const heroContainer = {
   initial: {},
@@ -93,7 +94,7 @@ export function HeroSection() {
           >
             <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
               <Image
-                src="/files/home.png"
+                src={withBasePath("/files/home.png")}
                 alt="Vista previa de reportes de Coubber"
                 width={1200}
                 height={900}

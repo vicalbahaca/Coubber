@@ -23,7 +23,7 @@ import {
   DEVICE_TYPES,
   INTEGRATION_CATEGORIES,
 } from "@/app/lib/constants";
-import { cn } from "@/app/lib/utils";
+import { cn, withBasePath } from "@/app/lib/utils";
 
 const categoryIcons = [Gauge, Dumbbell, Repeat2, Ruler, MapPinned, ArrowDownToLine];
 
@@ -179,7 +179,7 @@ export function IntegrationsSection() {
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50">
                       <Image
-                        src={i.iconSrc}
+                        src={withBasePath(i.iconSrc)}
                         alt={`${i.name} icon`}
                         width={34}
                         height={34}
@@ -213,7 +213,7 @@ export function IntegrationsSection() {
                     className="rounded-xl border border-gray-200 bg-white p-4"
                   >
                     <Image
-                      src={d.imageSrc}
+                      src={withBasePath(d.imageSrc)}
                       alt={`${d.name} illustration`}
                       width={160}
                       height={120}

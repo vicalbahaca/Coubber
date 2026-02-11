@@ -8,6 +8,7 @@ import { Section } from "@/app/components/layout/Section";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import { Card } from "@/app/components/ui/card";
+import { withBasePath } from "@/app/lib/utils";
 import {
   API_HARDWARE_INTEGRATIONS,
   DEVICE_TYPES,
@@ -103,7 +104,7 @@ export default function IntegrationsPage() {
                     >
                       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50">
                         <Image
-                          src={i.iconSrc}
+                          src={withBasePath(i.iconSrc)}
                           alt={`${i.name} icon`}
                           width={34}
                           height={34}
@@ -144,7 +145,7 @@ export default function IntegrationsPage() {
                       className="rounded-xl border border-gray-200 bg-white p-4"
                     >
                       <Image
-                        src={d.imageSrc}
+                        src={withBasePath(d.imageSrc)}
                         alt={`${d.name} illustration`}
                         width={160}
                         height={120}

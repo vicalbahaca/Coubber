@@ -24,6 +24,9 @@ const nextConfig = {
         assetPrefix: `${basePath}/`,
       }
     : {}),
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 
   // Avoid Next inferring a higher-level workspace root (e.g. when other lockfiles exist).
   outputFileTracingRoot: __dirname,
