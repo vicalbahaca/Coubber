@@ -32,7 +32,7 @@ export default function ReportsPage() {
                 <Link href="/demo">Acceso anticipado</Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
-                <Link href="#sample-report">Ver informe de muestra</Link>
+                <Link href="/demo">Accede al acceso anticipado</Link>
               </Button>
             </div>
           </Reveal>

@@ -77,7 +77,7 @@ export default function DemoPage() {
                   los outputs de testing con decisiones sin perder matices.”
                 </p>
                 <p className="mt-4 text-sm font-semibold text-gray-900">
-                  — Responsable de rehab, High-Performance Institute
+                  — Responsable de rehab, organización confidencial
                 </p>
               </Card>
             </div>

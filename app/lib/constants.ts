@@ -13,17 +13,17 @@ export const NAV_LINKS = [
 
 export const PRIMARY_CTA = { label: "Solicitar acceso anticipado", href: "/demo" } as const;
 export const SECONDARY_CTA = {
-  label: "Ver informe de muestra",
-  href: "/reports#sample-report",
+  label: "Accede al acceso anticipado",
+  href: "/demo",
 } as const;
 
 export const TRUST_LOGOS = [
-  { name: "Atlas Performance Lab" },
-  { name: "Northshore United FC" },
-  { name: "Metropolitan Rugby" },
-  { name: "Elite Academy Program" },
-  { name: "High-Performance Institute" },
-  { name: "Coastal Basketball Club" },
+  { name: "Organización confidencial" },
+  { name: "Programa de alto rendimiento" },
+  { name: "Club profesional" },
+  { name: "Academia deportiva" },
+  { name: "Instituto de rendimiento" },
+  { name: "Equipo universitario" },
 ] as const;
 
 export const TRUST_STATS = [
@@ -253,21 +253,21 @@ export const TESTIMONIALS = [
       "Coubber redujo nuestro tiempo de reportes semanales de 6 horas a 30 minutos. La interpretación con IA nos ayuda a detectar patrones que se nos escapaban.",
     name: "David Thompson",
     role: "Director de rendimiento",
-    org: "European Football Academy (Socio de diseño)",
+    org: "Organización confidencial (Socio de diseño)",
   },
   {
     quote:
       "Los perfiles unificados por fin mantienen alineados fuerza, GPS y notas médicas — adiós a perseguir exportaciones en semana de partido.",
     name: "Sofia Martinez",
     role: "Científica del deporte",
-    org: "Top Division Rugby Program (Socio de diseño)",
+    org: "Organización confidencial (Socio de diseño)",
   },
   {
     quote:
       "Nuestro equipo médico ama la vista de return-to-play. Convierte las sesiones de testing en siguientes pasos claros que los entrenadores usan.",
     name: "Chris Lee",
     role: "Responsable de rehab",
-    org: "High-Performance Institute (Socio de diseño)",
+    org: "Organización confidencial (Socio de diseño)",
   },
 ] as const;
 

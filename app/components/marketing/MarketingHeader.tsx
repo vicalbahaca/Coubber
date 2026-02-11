@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
 import { NAV_LINKS, PRIMARY_CTA, SITE } from "@/app/lib/constants";
-import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/app/components/ui/sheet";
 
@@ -15,21 +14,16 @@ export function MarketingHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-semibold tracking-tight text-gray-900"
-            aria-label={`Inicio de ${SITE.name}`}
-          >
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary-600 text-sm font-bold text-white">
-              C
-            </span>
-            <span className="hidden sm:inline">{SITE.name}</span>
-          </Link>
-          <Badge variant="accent" className="hidden sm:inline-flex">
-            Acceso anticipado
-          </Badge>
-        </div>
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-semibold tracking-tight text-gray-900"
+          aria-label={`Inicio de ${SITE.name}`}
+        >
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary-600 text-sm font-bold text-white">
+            C
+          </span>
+          <span className="hidden sm:inline">{SITE.name}</span>
+        </Link>
 
         <nav
           className="hidden items-center gap-6 md:flex"
@@ -55,7 +49,7 @@ export function MarketingHeader() {
 
         <div className="flex items-center gap-3">
           <Button asChild className="hidden md:inline-flex">
-            <Link href={PRIMARY_CTA.href}>{PRIMARY_CTA.label}</Link>
+            <Link href={PRIMARY_CTA.href}>Accede a la demo</Link>
           </Button>
 
           <div className="md:hidden">
@@ -75,7 +69,6 @@ export function MarketingHeader() {
                     C
                   </div>
                   <span className="font-semibold text-gray-900">{SITE.name}</span>
-                  <Badge variant="accent">Acceso anticipado</Badge>
                 </div>
 
                 <nav className="grid gap-2" aria-label="Mobile navigation">
@@ -103,7 +96,7 @@ export function MarketingHeader() {
                 <div className="mt-auto">
                   <SheetClose asChild>
                     <Button asChild size="lg" className="w-full">
-                      <Link href={PRIMARY_CTA.href}>{PRIMARY_CTA.label}</Link>
+                      <Link href={PRIMARY_CTA.href}>Accede a la demo</Link>
                     </Button>
                   </SheetClose>
                 </div>
