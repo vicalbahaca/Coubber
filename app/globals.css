@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary - Athletic/Performance */
+  --primary-50: #eff6ff;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+
+  /* Accent - Energy/Action */
+  --accent-500: #f59e0b;
+  --accent-600: #d97706;
+  --accent-700: #b45309;
+
+  /* Success/Data visualization */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+body {
+  @apply bg-white font-sans text-gray-900;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.35);
+}
