@@ -60,3 +60,5 @@ Key folders:
 ## Notes
 - Fonts are loaded locally via `@fontsource-variable/inter` (no Google Fonts fetch at build time).
 - `npm run build` is configured to use webpack (`next build --webpack`) for compatibility in restricted environments.
+- GitHub Pages deploy is configured via `.github/workflows/pages.yml` and uses `next.config.mjs` with `output: "export"` (static).
+- Demo form submission is static-friendly. To capture leads on Pages, set `NEXT_PUBLIC_DEMO_ENDPOINT` (e.g. Formspree/Getform) as a GitHub Actions secret or repository variable.

@@ -51,15 +51,20 @@ export function DemoRequestForm() {
   async function onSubmit(values: DemoRequestInput) {
     setServerState({ status: "idle" });
     try {
-      const res = await fetch("/api/demo", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(values),
-      });
+      // GitHub Pages deploy is static (no backend). If you set a public endpoint
+      // (e.g. Formspree / Getform / your API), we can POST to it from the client.
+      const endpoint = process.env.NEXT_PUBLIC_DEMO_ENDPOINT;
+      if (endpoint) {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(values),
+        });
 
-      if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        throw new Error(text || "Something went wrong. Please try again.");
+        if (!res.ok) {
+          const text = await res.text().catch(() => "");
+          throw new Error(text || "Something went wrong. Please try again.");
+        }
       }
 
       setServerState({ status: "success" });
@@ -267,4 +272,3 @@ export function DemoRequestForm() {
     </form>
   );
 }
-
