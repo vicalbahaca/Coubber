@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -17,7 +18,11 @@ import { Section } from "@/app/components/layout/Section";
 import { Badge } from "@/app/components/ui/badge";
 import { Button } from "@/app/components/ui/button";
 import { Card } from "@/app/components/ui/card";
-import { INTEGRATION_CATEGORIES } from "@/app/lib/constants";
+import {
+  API_HARDWARE_INTEGRATIONS,
+  DEVICE_TYPES,
+  INTEGRATION_CATEGORIES,
+} from "@/app/lib/constants";
 import { cn } from "@/app/lib/utils";
 
 const categoryIcons = [Gauge, Dumbbell, Repeat2, Ruler, MapPinned, ArrowDownToLine];
@@ -154,8 +159,80 @@ export function IntegrationsSection() {
             <IntegrationsFlowVisual />
           </Reveal>
         </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+          <Reveal>
+            <Card className="h-full p-6 md:p-8">
+              <h3 className="text-xl font-semibold text-gray-900">
+                API-connected hardware
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                Direct API integrations for practitioner-grade tools and
+                wearables.
+              </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+                {API_HARDWARE_INTEGRATIONS.map((i) => (
+                  <div
+                    key={i.name}
+                    className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-3"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50">
+                      <Image
+                        src={i.iconSrc}
+                        alt={`${i.name} icon`}
+                        width={34}
+                        height={34}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold text-gray-900">
+                        {i.name}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </Reveal>
+
+          <Reveal>
+            <Card className="h-full p-6 md:p-8">
+              <h3 className="text-xl font-semibold text-gray-900">
+                Device types supported
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                Built to ingest real hardware outputs — not just CSVs.
+              </p>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {DEVICE_TYPES.map((d) => (
+                  <div
+                    key={d.name}
+                    className="rounded-xl border border-gray-200 bg-white p-4"
+                  >
+                    <Image
+                      src={d.imageSrc}
+                      alt={`${d.name} illustration`}
+                      width={160}
+                      height={120}
+                      className="h-20 w-auto"
+                      loading="lazy"
+                    />
+                    <p className="mt-3 text-sm font-semibold text-gray-900">
+                      {d.name}
+                    </p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      {d.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </Reveal>
+        </div>
       </Container>
     </Section>
   );
 }
-

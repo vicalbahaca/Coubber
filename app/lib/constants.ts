@@ -111,7 +111,7 @@ export const INTEGRATION_CATEGORIES = [
   },
   {
     title: "Velocity-Based Training",
-    items: ["GymAware", "Vitruve", "PUSH"],
+    items: ["GymAware", "Vitruve", "PUSH", "ADR Encoder", "Swift"],
   },
   {
     title: "Isoinertial / Flywheel",
@@ -123,11 +123,71 @@ export const INTEGRATION_CATEGORIES = [
   },
   {
     title: "GPS & Wearables",
-    items: ["Catapult", "STATSports", "readyX (Wellness)"],
+    items: ["Catapult", "STATSports", "WHOOP", "readyX (Wellness)"],
   },
   {
     title: "CSV / Manual Import",
     items: ["CSV Upload", "Google Sheets", "Manual Entry"],
+  },
+] as const;
+
+export const API_HARDWARE_INTEGRATIONS = [
+  {
+    name: "Chronojump",
+    iconSrc: "/files/integrations/chronojump.svg",
+  },
+  {
+    name: "MyJumpLab",
+    iconSrc: "/files/integrations/myjumplab.svg",
+  },
+  {
+    name: "ADR Encoder",
+    iconSrc: "/files/integrations/adr-encoder.svg",
+  },
+  {
+    name: "Swift",
+    iconSrc: "/files/integrations/swift.svg",
+  },
+  {
+    name: "Kinvent",
+    iconSrc: "/files/integrations/kinvent.svg",
+  },
+  {
+    name: "WHOOP",
+    iconSrc: "/files/integrations/whoop.svg",
+  },
+] as const;
+
+export const DEVICE_TYPES = [
+  {
+    name: "Linear encoders",
+    description: "Velocity + displacement for strength and rehab workflows.",
+    imageSrc: "/files/devices/linear-encoder.svg",
+  },
+  {
+    name: "Rotational encoders",
+    description: "Rotary measurement for flywheel and pulley-based systems.",
+    imageSrc: "/files/devices/rotational-encoder.svg",
+  },
+  {
+    name: "Strain gauges",
+    description: "Load cells for force measurement and instrumented setups.",
+    imageSrc: "/files/devices/strain-gauge.svg",
+  },
+  {
+    name: "Force plates",
+    description: "Impulse, asymmetry, RFD and force-time diagnostics.",
+    imageSrc: "/files/devices/force-plate.svg",
+  },
+  {
+    name: "Contact platforms",
+    description: "Jump timing and contact metrics across protocols.",
+    imageSrc: "/files/devices/contact-platform.svg",
+  },
+  {
+    name: "Dynamometers",
+    description: "Strength testing and return-to-play monitoring.",
+    imageSrc: "/files/devices/dynamometer.svg",
   },
 ] as const;
 
